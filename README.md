@@ -11,6 +11,8 @@ Homework for the Rise In course [Solidity Fundamentals](https://www.risein.com/c
 
 ## ProposalContract
 
+Deployed on the Sepolia testnet: [`0x1936327040029fdAc40bdC5A2B15C635D5EcCF6f`](https://sepolia.etherscan.io/address/0x1936327040029fdAc40bdC5A2B15C635D5EcCF6f)
+
 Differences to the course version:
 
 - **Title:** every proposal has a `title` in addition to its `description`. `create(_title, _description, _total_vote_to_end)` takes it as a parameter.
