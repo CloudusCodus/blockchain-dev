@@ -52,11 +52,18 @@ contract ProposalContract {
     }
 
     function create(string calldata _title, string calldata _description, uint256 _total_vote_to_end) external onlyOwner {
+        // With 0 the vote function would underflow and nobody could ever vote
+        require(_total_vote_to_end > 0, "Total vote to end must be greater than 0");
         counter += 1;
         proposal_history[counter] = Proposal(_title, _description, 0, 0, 0, _total_vote_to_end, false, true);
+        // A terminated proposal does not reset the voters, so we reset them for every new proposal
+        voted_addresses = [owner];
     }
 
     function vote(uint8 choice) external active newVoter(msg.sender){
+        // Otherwise an invalid choice would use up the vote of the caller without counting it
+        require(choice <= 2, "Choice must be 0 (pass), 1 (approve) or 2 (reject)");
+
         Proposal storage proposal = proposal_history[counter];
         uint256 total_vote = proposal.approve + proposal.reject + proposal.pass;
 
@@ -77,6 +84,10 @@ contract ProposalContract {
             proposal.is_active = false;
             voted_addresses = [owner];
         }
+    }
+
+    function terminateProposal() external onlyOwner active {
+        proposal_history[counter].is_active = false;
     }
 
     // Our own logic for the state of a proposal: "60% supermajority with quorum".
@@ -124,5 +135,13 @@ contract ProposalContract {
             }
         }
         return false;
+    }
+
+    function getCurrentProposal() external view returns(Proposal memory) {
+        return proposal_history[counter];
+    }
+
+    function getProposal(uint256 number) external view returns(Proposal memory) {
+        return proposal_history[number];
     }
 }

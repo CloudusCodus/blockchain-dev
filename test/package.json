@@ -1,0 +1,12 @@
+{
+  "name": "proposal-contract-test",
+  "private": true,
+  "scripts": {
+    "test": "node --test"
+  },
+  "devDependencies": {
+    "ethers": "6.13.4",
+    "ganache": "7.9.2",
+    "solc": "0.8.26"
+  }
+}
