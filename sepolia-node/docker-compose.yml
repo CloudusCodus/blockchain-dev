@@ -1,0 +1,96 @@
+# Sepolia node: geth (execution layer) + Lighthouse (consensus layer)
+#
+# Only the P2P ports are published to all interfaces. The JSON-RPC (8545) and
+# Beacon API (5052) ports are published on 127.0.0.1 only, and the Engine API
+# (8551) is not published at all: Lighthouse reaches it over the internal
+# Docker network.
+
+services:
+  geth:
+    image: ethereum/client-go:${GETH_VERSION}
+    container_name: geth
+    restart: unless-stopped
+    # geth flushes its in-memory state on shutdown, give it time to do so
+    stop_grace_period: 5m
+    command:
+      - --sepolia
+      - --datadir=/data
+      - --syncmode=snap
+      - --state.scheme=path
+      # Keep the node small: drop block history before the configured fork
+      # (postosaka is the smallest predefined mode for Sepolia) and skip the
+      # log search index, which we do not need.
+      - --history.chain=${GETH_HISTORY_CHAIN}
+      - --history.logs.disable
+      # P2P (devp2p TCP + discovery UDP)
+      - --port=30303
+      - --nat=extip:${PUBLIC_IP}
+      - --maxpeers=${GETH_MAXPEERS}
+      # JSON-RPC, only eth/net/web3. Peer details are read via IPC instead.
+      - --http
+      - --http.addr=0.0.0.0
+      - --http.port=8545
+      - --http.api=eth,net,web3
+      - --http.vhosts=localhost
+      # Engine API for Lighthouse, authenticated with the JWT secret
+      - --authrpc.addr=0.0.0.0
+      - --authrpc.port=8551
+      - --authrpc.vhosts=geth
+      - --authrpc.jwtsecret=/jwt/jwt.hex
+    ports:
+      - "30303:30303/tcp"
+      - "30303:30303/udp"
+      - "127.0.0.1:8545:8545/tcp"
+    volumes:
+      - ${DATA_DIR}/geth:/data
+      - ./jwt:/jwt:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "10"
+
+  lighthouse:
+    image: sigp/lighthouse:${LIGHTHOUSE_VERSION}
+    container_name: lighthouse
+    restart: unless-stopped
+    stop_grace_period: 2m
+    depends_on:
+      - geth
+    command:
+      - lighthouse
+      - bn
+      - --network=sepolia
+      - --datadir=/data
+      - --execution-endpoint=http://geth:8551
+      - --execution-jwt=/jwt/jwt.hex
+      # Start from a recent finalized state instead of syncing from genesis
+      - --checkpoint-sync-url=${CHECKPOINT_SYNC_URL}
+      # P2P (libp2p TCP + discv5 UDP on 9000, QUIC on 9001)
+      - --listen-address=0.0.0.0
+      - --port=9000
+      - --quic-port=9001
+      - --enr-address=${PUBLIC_IP}
+      - --enr-tcp-port=9000
+      - --enr-udp-port=9000
+      - --enr-quic-port=9001
+      # Ports are forwarded manually on the router
+      - --disable-upnp
+      - --target-peers=${LIGHTHOUSE_TARGET_PEERS}
+      # Beacon API for the evidence scripts
+      - --http
+      - --http-address=0.0.0.0
+      - --http-port=5052
+    ports:
+      - "9000:9000/tcp"
+      - "9000:9000/udp"
+      - "9001:9001/udp"
+      - "127.0.0.1:5052:5052/tcp"
+    volumes:
+      - ${DATA_DIR}/lighthouse:/data
+      - ./jwt:/jwt:ro
+    logging:
+      driver: json-file
+      options:
+        max-size: "50m"
+        max-file: "10"

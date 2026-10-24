@@ -2,6 +2,26 @@
 
 You (Claude) are taking over this task in a new session on the user's **home server**. The previous session ran on the user's Windows laptop. It analysed the task and agreed the concept with the user, but nothing has been installed or started yet. This file has everything you need. Read all of it before doing anything.
 
+## Status: Phase 1 is already prepared (2026-10-24)
+
+The previous session prepared these files in this folder. Phase 1 below is therefore mostly done. Review them, then start with Phase 0.
+
+| File | Content |
+|---|---|
+| `docker-compose.yml` | geth + Lighthouse. P2P ports public; 8545/5052 on 127.0.0.1 only; 8551 not published. Log rotation, `restart: unless-stopped` |
+| `.env.example` | pinned versions **geth v1.17.10**, **Lighthouse v8.3.2** (latest stable on 2026-10-24, both released 2026-10-23), `GETH_HISTORY_CHAIN=postosaka`, `PUBLIC_IP`, `DATA_DIR`, checkpoint URL |
+| `.gitignore` | `.env`, `jwt/`, `data/` |
+| `scripts/preflight.sh` | Phase 0 checks → `evidence/00-environment.txt` (read-only) |
+| `scripts/gen-jwt.sh` | creates `jwt/jwt.hex` |
+| `scripts/restart-test.sh` | persistence proof → `evidence/04-restart-test.txt` |
+| `scripts/collect-evidence.sh` | all other evidence → `evidence/01..05` |
+| `README.md` | report skeleton. Setup, port table and the "why not expose RPC" section are written; the `TODO` parts need real results |
+
+What has been verified and what has not:
+- **Verified:** every geth flag exists in the v1.17.10 source (`cmd/utils/flags.go`). Every Lighthouse flag exists in the v8.3.2 `book/src/help_bn.md`. `postosaka` is a predefined history mode with a Sepolia cutoff (block 9408577). Both images exist on Docker Hub. The geth image's entrypoint is `geth`. The Lighthouse image has no entrypoint, so the command starts with `lighthouse bn`. Both images run as root. The checkpoint URL and the public reference endpoints (publicnode) responded. `bash -n` passes for all scripts, and `docker compose config` passes.
+- **Not verified yet:** the setup has **never been started**. The scripts have never run against real containers, and the jq paths and log formats are untested. Re-check the versions on the start date. Fix anything that breaks and note it in the report.
+- The scripts assume Linux with bash, curl, jq, openssl and ss. `preflight.sh` reports anything missing.
+
 ## Working with the user
 
 - Talk to the user in **German**. Code, comments, commit messages and file contents are in English.

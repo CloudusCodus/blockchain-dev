@@ -1,0 +1,4 @@
+# Secrets and chain data never go into git
+.env
+jwt/
+data/
