@@ -2,3 +2,11 @@
 .env
 jwt/
 data/
+
+# Terraform state, provider cache and local variables (home IP)
+terraform/.terraform/
+terraform/*.tfstate
+terraform/*.tfstate.*
+terraform/terraform.tfvars
+terraform/tfplan
+hetzner-user-data.yaml

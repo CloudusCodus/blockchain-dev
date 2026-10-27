@@ -1,0 +1,52 @@
+# Infrastructure
+# collected 2026-10-27T06:50:23Z
+
+## Docker containers running
+
+$ docker compose ps
+NAME         IMAGE                         COMMAND                  SERVICE      CREATED              STATUS              PORTS
+geth         ethereum/client-go:v1.17.10   "geth --sepolia --da…"   geth         About a minute ago   Up About a minute   127.0.0.1:8545->8545/tcp, 8546/tcp, 0.0.0.0:30303->30303/tcp, 0.0.0.0:30303->30303/udp, [::]:30303->30303/tcp, [::]:30303->30303/udp
+lighthouse   sigp/lighthouse:v8.3.2        "lighthouse bn --net…"   lighthouse   About a minute ago   Up About a minute   127.0.0.1:5052->5052/tcp, 0.0.0.0:9000->9000/tcp, 0.0.0.0:9000-9001->9000-9001/udp, [::]:9000->9000/tcp, [::]:9000-9001->9000-9001/udp
+
+$ docker stats --no-stream
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O           BLOCK I/O
+geth         21.55%    761MiB / 15.24GiB     5.91MB / 20MB     7.54MB / 63.2MB
+lighthouse   16.93%    357.1MiB / 15.24GiB   23.5MB / 11.1MB   257MB / 327MB
+
+## Persistent blockchain data
+
+$ docker inspect (mounts)
+/geth  /srv/sepolia/data/geth -> /data (bind)  /srv/sepolia/jwt -> /jwt (bind)
+/lighthouse  /srv/sepolia/data/lighthouse -> /data (bind)  /srv/sepolia/jwt -> /jwt (bind)
+
+$ du -sh ./data/*
+402G	./data/geth
+17G	./data/lighthouse
+16K	./data/lost+found
+
+$ df -h ./data
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb        1.5T  418G  983G  30% /srv/sepolia/data
+
+Restart test: see 04-restart-test.txt in the snapshots after a restart (scripts/restart-test.sh)
+
+## Errors in the logs (last 24 h)
+
+$ docker logs --since 24h geth | count by level
+     74 INFO
+      2 WARN
+
+$ docker logs --since 24h geth | grep -E 'CRIT|FATAL|ERROR|ERRO' (last 20)
+(none)
+
+$ docker logs --since 24h lighthouse | count by level
+      3 ERROR
+     26 INFO
+      7 WARN
+
+$ docker logs --since 24h lighthouse | grep -E 'CRIT|FATAL|ERROR|ERRO' (last 20)
+Oct 27 06:49:16.821 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:49:16.822 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:49:16.822 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+
+All WARN/ERROR/CRIT lines of the last 24 h: logs-warn-error.txt

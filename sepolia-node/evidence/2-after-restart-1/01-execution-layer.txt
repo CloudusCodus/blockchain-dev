@@ -1,0 +1,43 @@
+# Execution layer (geth)
+# collected 2026-10-27T06:48:52Z
+
+## Geth running
+
+$ docker ps --filter name=^geth$
+NAMES     IMAGE                         STATUS
+geth      ethereum/client-go:v1.17.10   Up About a minute
+
+$ web3_clientVersion
+Geth/v1.17.10-stable-1df30b18/linux-amd64/go1.27.3
+
+## Geth synchronized
+
+$ eth_syncing  (false = synced)
+false
+
+## Current block number
+
+$ eth_blockNumber (own node vs. public reference https://ethereum-sepolia-rpc.publicnode.com)
+own node:  12003428
+reference: 12003429
+difference: 1 blocks
+
+$ latest block of own node
+number 0xb72864 hash 0x4cd3a171a73d8b98cf9a1a720305ef4e39edbd015007b7169116e37cc3dc0efd timestamp 0x6ae04944
+
+## Execution peers
+
+$ net_peerCount
+20
+
+## Inbound / outbound connectivity
+
+$ admin.peers grouped by direction (IPC)
+"{\"total\":20,\"inbound\":18,\"outbound\":2}"
+
+$ admin.nodeInfo (advertised enode with public IP and port)
+"enode://25868022db409a6de72aa942a8fc0f5f226ee7ce4495e11c421ea1f44aa7c4f277a5696a6192cde0c5f49779ee03e72bc208dcecd51ceee6a3c14ad470b1d633@138.201.155.69:30303"
+"{\"discovery\":30303,\"listener\":30303}"
+
+$ first 15 peers: client, remote address, inbound
+"reth/v2.8.0-pulse-5f37396  157.90.179.40:30313  inbound=false\nGeth/v1.17.8-stable-a5790770  138.2.52.203:2388  inbound=true\nreth/v2.7.0-3d592ec  35.164.53.249:11534  inbound=true\nreth/v2.7.0-3d592ec  43.201.121.36:19726  inbound=true\nGeth/v1.17.7-stable-3d858f85  35.236.154.198:30303  inbound=false\nreth/v2.7.0-3d592ec  40.160.67.145:52356  inbound=true\nreth/v2.8.0-05ba481  24.64.123.118:51010  inbound=true\nreth/v2.7.0-3d592ec  18.208.204.150:32778  inbound=true\nGeth/v1.17.9-stable-9dffe6e9  162.43.189.121:44236  inbound=true\nreth/v2.7.0-3d592ec  23.109.63.228:53760  inbound=true\nreth/v2.7.0-3d592ec  45.248.77.177:52222  inbound=true\nreth/v2.8.1-d763342  38.242.232.250:42856  inbound=true\nGeth/v1.17.7-stable-3d858f85  104.198.134.175:1536  inbound=true\nreth/v2.7.0-3d592ec  44.214.136.188:21910  inbound=true\nreth/v2.7.0-3d592ec  3.36.185.233:33745  inbound=true"

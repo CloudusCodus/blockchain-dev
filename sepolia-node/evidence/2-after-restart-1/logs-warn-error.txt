@@ -1,0 +1,19 @@
+
+===== geth
+WARN [10-27|06:47:41.001] Sanitizing invalid node buffer size      provided=1.00GiB updated=256.00MiB
+WARN [10-27|06:48:24.323] Ignoring already known beacon payload    number=12,003,426 hash=35bbc1..8a1a70 age=12s
+WARN [10-27|06:48:36.137] Ignoring already known beacon payload    number=12,003,427 hash=85ab3b..f0174b age=12s
+WARN [10-27|06:48:48.452] Ignoring already known beacon payload    number=12,003,428 hash=4cd3a1..dc0efd age=12s
+
+===== lighthouse
+Oct 27 06:47:29.563 WARN  Fork boundaries are not well aligned / multiples of 256  info: "This may cause issues as fork boundaries do not align with the start of sync committee period.", misaligned_forks: [(Altair, Epoch(50)), (Bellatrix, Epoch(100))]
+Oct 27 06:47:33.553 WARN  State cache missed                            state_root: 0x5a78e889f9634a1517e454f0c3e57f46e94c8bfc3d4a9ce24be13571fe10afbb
+Oct 27 06:47:33.739 WARN  State cache missed                            state_root: 0xd050d652c449256a7d77446db6717db42f2728b71412096395d994b3bd0d8edb, block_root: 0x0c7cdd4f92d9204cd9fb90d35c067db416787ae1a1c57273ad3cd90e4297befd
+Oct 27 06:47:33.821 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:47:33.821 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:47:33.821 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect)) }
+Oct 27 06:47:33.821 WARN  Failed to update head on execution engines    error: ExecutionForkChoiceUpdateFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect)) }))
+Oct 27 06:47:33.822 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:47:33.822 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:48:06.073 WARN  State cache missed                            state_root: 0x77a29c21d20970cc57b5946e415960aa880e57bfea0cfa32db21fcd60f4f8b6a, block_root: 0x682ffc231ffc866c005b79db6b268451cae0f38229e66cba8aaa557587b808a2
+Oct 27 06:48:24.188 WARN  State cache missed                            state_root: 0x34444dda8a7f9ef1eae06f7db26a1f7b88c58744c442d7a92e841fe040fb4fcd, block_root: 0x06e625681618da73d030c99631a864131f1a52674266cd8a9a39bb976a5b98a1

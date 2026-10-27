@@ -1,0 +1,59 @@
+# Environment check, 2026-10-25T11:11:42Z
+
+### OS / kernel
+Ubuntu 24.04.4 LTS
+Linux 6.8.0-138-generic x86_64
+
+### CPU / RAM
+CPU threads: 8
+               total        used        free      shared  buff/cache   available
+Mem:            15Gi       759Mi        13Gi       4.8Mi       1.1Gi        14Gi
+Swap:             0B          0B          0B
+
+### Disks (ROTA=1 means spinning disk / HDD)
+NAME ROTA   SIZE MODEL
+sda     0 305.2G QEMU HARDDISK
+sdb     0   1.5T Volume
+sr0     1  1024M QEMU DVD-ROM
+
+### Free space where DATA_DIR=./data would live
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb        1.5T   28K  1.4T   1% /srv/sepolia/data
+OK: 1401 GB free
+
+### Tools
+docker: ok
+curl: ok
+jq: ok
+openssl: ok
+ss: ok
+docker server 29.1.3
+Docker Compose version 2.40.3+ds1-0ubuntu1~24.04.1
+
+### Local network
+eth0             UP             138.201.155.69/32 metric 100 2a01:4f8:c17:4c0c::1/64 fe80::9000:aff:fe45:acf1/64 
+docker0          DOWN           172.17.0.1/16 
+default via 172.31.1.1 dev eth0 proto dhcp src 138.201.155.69 metric 100 
+default via fe80::1 dev eth0 proto static metric 1024 onlink pref medium
+
+### Public addresses as seen from the Internet
+public IPv4: 138.201.155.69
+public IPv6: 2a01:4f8:c17:4c0c::1
+Compare the public IPv4 with the WAN IP shown in the router.
+Different, or a WAN IP in 100.64.0.0/10 -> CGNAT, IPv4 port forwarding will not work.
+
+### First hops towards the Internet (100.64.x.x after the router hints at CGNAT)
+ 1?: [LOCALHOST]                      pmtu 1500
+ 1:  172.31.1.1                                            3.062ms 
+ 1:  172.31.1.1                                            1.346ms 
+ 2:  138.199.181.210                                       0.844ms asymm  1 
+ 3:  no reply
+ 4:  no reply
+     Too many hops: pmtu 1500
+     Resume: pmtu 1500 
+
+### Host firewall
+Status: inactive
+
+### Ports already in use (must be free: 30303, 9000, 9001, 8545, 5052)
+none of them in use

@@ -1,0 +1,41 @@
+# Restart test, 2026-10-27T06:47:18Z
+
+## Before
+06:47:18Z  geth block 12003421  lighthouse slot 11445836
+container IDs: 98fe23ced589 01ad4089dd58 
+NAME         STATUS
+geth         Up 44 hours
+lighthouse   Up 44 hours
+
+## docker compose down  (containers are removed, only the data on the volume stays)
+ Container lighthouse  Stopping
+ Container lighthouse  Stopped
+ Container lighthouse  Removing
+ Container lighthouse  Removed
+ Container geth  Stopping
+ Container geth  Stopped
+ Container geth  Removing
+ Container geth  Removed
+ Network sepolia_default  Removing
+ Network sepolia_default  Removed
+containers left: 0
+
+## docker compose up -d  (new containers)
+ Network sepolia_default  Creating
+ Network sepolia_default  Created
+ Container geth  Creating
+ Container geth  Created
+ Container lighthouse  Creating
+ Container lighthouse  Created
+ Container geth  Starting
+ Container geth  Started
+ Container lighthouse  Starting
+ Container lighthouse  Started
+
+## After (waiting for the APIs to come back)
+06:47:44Z  geth block 12003421  lighthouse slot 11445836
+container IDs: 9e5001921a1c 81fa106e99e1 
+NAME         STATUS
+geth         Up 16 seconds
+lighthouse   Up 15 seconds
+lighthouse syncing: {"is_syncing":false,"is_optimistic":false,"el_offline":true,"head_slot":"11445836","sync_distance":"2"}

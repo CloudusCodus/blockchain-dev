@@ -1,0 +1,88 @@
+#cloud-config
+# First boot of the Hetzner server: installs Docker, mounts the chain data
+# volume, writes the node files to /srv/sepolia and starts the node.
+package_update: true
+packages:
+  - docker.io
+  - docker-compose-v2
+  - jq
+  - curl
+
+write_files:
+  - path: /srv/sepolia/docker-compose.yml
+    permissions: "0644"
+    content: |
+      ${compose}
+  - path: /srv/sepolia/.env.example
+    permissions: "0644"
+    content: |
+      ${env_example}
+  - path: /srv/sepolia/scripts/gen-jwt.sh
+    permissions: "0755"
+    content: |
+      ${gen_jwt}
+  - path: /srv/sepolia/scripts/check-sync.sh
+    permissions: "0755"
+    content: |
+      ${check_sync}
+  - path: /srv/sepolia/scripts/collect-evidence.sh
+    permissions: "0755"
+    content: |
+      ${collect}
+  - path: /srv/sepolia/scripts/restart-test.sh
+    permissions: "0755"
+    content: |
+      ${restart_test}
+  - path: /srv/sepolia/scripts/preflight.sh
+    permissions: "0755"
+    content: |
+      ${preflight}
+  - path: /srv/sepolia/scripts/egress-filter.sh
+    permissions: "0755"
+    content: |
+      ${egress_filter}
+  - path: /etc/systemd/system/sepolia-egress-filter.service
+    permissions: "0644"
+    content: |
+      [Unit]
+      Description=Drop outgoing traffic to private address ranges
+      After=docker.service
+      PartOf=docker.service
+
+      [Service]
+      Type=oneshot
+      RemainAfterExit=yes
+      ExecStart=/srv/sepolia/scripts/egress-filter.sh
+
+      [Install]
+      WantedBy=multi-user.target docker.service
+
+runcmd:
+  # The volume may be attached after the server has booted, so wait for it.
+  # The server has exactly one volume, so its ID does not need to be known.
+  - |
+    for i in $(seq 1 60); do
+        DEV=$(ls /dev/disk/by-id/scsi-0HC_Volume_* 2>/dev/null | head -1)
+        [ -n "$DEV" ] && break
+        sleep 5
+    done
+    mkdir -p /srv/sepolia/data
+    echo "$DEV /srv/sepolia/data ext4 discard,nofail,defaults 0 2" >> /etc/fstab
+    systemctl daemon-reload
+    mount /srv/sepolia/data
+  # Docker (and with it the containers) only starts once the volume is mounted,
+  # so the node never writes chain data to the small system disk
+  - mkdir -p /etc/systemd/system/docker.service.d
+  - printf '[Unit]\nRequiresMountsFor=/srv/sepolia/data\n' > /etc/systemd/system/docker.service.d/sepolia-data.conf
+  - systemctl daemon-reload
+  - systemctl restart docker
+  - systemctl enable --now sepolia-egress-filter.service
+  - |
+    cd /srv/sepolia
+    PUB=$(curl -s http://169.254.169.254/hetzner/v1/metadata/public-ipv4)
+    sed -e "s|^DATA_DIR=.*|DATA_DIR=./data|" -e "s|^PUBLIC_IP=.*|PUBLIC_IP=$PUB|" .env.example > .env
+    scripts/gen-jwt.sh
+    scripts/preflight.sh > /dev/null
+    docker compose up -d
+
+final_message: "Sepolia node bootstrapped after $UPTIME seconds"

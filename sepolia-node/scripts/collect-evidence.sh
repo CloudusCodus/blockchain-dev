@@ -1,10 +1,13 @@
 #!/usr/bin/env bash
-# Phase 4: collects the evidence for the assignment into evidence/.
-# Run it once both clients are synced. Read-only, changes nothing.
+# Collects the evidence for the assignment into one snapshot folder,
+# evidence/<label>/ (default label: UTC timestamp). Run it once both clients
+# are synced. Read-only, changes nothing.
+#   scripts/collect-evidence.sh [label]
 # Needs: docker, curl, jq
 set -uo pipefail
 cd "$(dirname "$0")/.."
-mkdir -p evidence
+OUT=evidence/${1:-$(date -u +%Y%m%dT%H%M%SZ)}
+mkdir -p "$OUT"
 
 GETH_RPC=http://127.0.0.1:8545
 BEACON_API=http://127.0.0.1:5052
@@ -66,7 +69,7 @@ header() { printf '# %s\n# collected %s\n' "$1" "$TS"; }
     attach 'JSON.stringify(admin.nodeInfo.ports)'
     cmd "first 15 peers: client, remote address, inbound"
     attach 'admin.peers.slice(0, 15).map(function (p) { return p.name.split("/").slice(0, 2).join("/") + "  " + p.network.remoteAddress + "  inbound=" + p.network.inbound }).join("\n")'
-} > evidence/01-execution-layer.txt 2>&1
+} > "$OUT/01-execution-layer.txt" 2>&1
 
 # ---------------------------------------------------------------- consensus layer
 {
@@ -105,7 +108,7 @@ header() { printf '# %s\n# collected %s\n' "$1" "$TS"; }
     cmd "first 15 connected peers"
     beacon '/eth/v1/node/peers?state=connected' \
         | jq -r '.data[:15][] | "\(.direction)\t\(.last_seen_p2p_address)"'
-} > evidence/02-consensus-layer.txt 2>&1
+} > "$OUT/02-consensus-layer.txt" 2>&1
 
 # ---------------------------------------------------------------- infrastructure
 {
@@ -127,7 +130,7 @@ header() { printf '# %s\n# collected %s\n' "$1" "$TS"; }
     cmd "df -h $DATA_DIR"
     df -h "$DATA_DIR"
     echo
-    echo "Restart test: see evidence/04-restart-test.txt (scripts/restart-test.sh)"
+    echo "Restart test: see 04-restart-test.txt in the snapshots after a restart (scripts/restart-test.sh)"
 
     printf '\n## Errors in the logs (last 24 h)\n'
     # Strips color codes; the level is the first of the first few fields that looks like one
@@ -141,35 +144,46 @@ header() { printf '# %s\n# collected %s\n' "$1" "$TS"; }
         cmd "docker logs --since 24h $c | grep -E 'CRIT|FATAL|ERROR|ERRO' (last 20)"
         logs "$c" | grep -E '\b(CRIT|FATAL|ERROR|ERRO)\b' | tail -20 | grep . || echo "(none)"
     done
-} > evidence/03-infrastructure.txt 2>&1
+    echo
+    echo "All WARN/ERROR/CRIT lines of the last 24 h: logs-warn-error.txt"
+} > "$OUT/03-infrastructure.txt" 2>&1
+
+# Every WARN/ERROR/CRIT line of the last 24 h, so each one can be classified.
+# The full logs are too large to keep.
+for c in geth lighthouse; do
+    printf '\n===== %s\n' "$c"
+    docker logs --since 24h "$c" 2>&1 | sed -E 's/\x1b\[[0-9;]*m//g' \
+        | grep -E '\b(WARN|ERROR|ERRO|CRIT|FATAL)\b' || echo "(none)"
+done > "$OUT/logs-warn-error.txt"
 
 # ---------------------------------------------------------------- networking
 {
     header "Networking"
 
-    cmd "docker port geth / lighthouse (published ports)"
+    cmd "ip -br addr (the public addresses sit directly on the server's interface: no NAT by the provider)"
+    ip -br addr
+    cmd "public IPv4 as seen from the Internet"
+    curl -4 -s --max-time 10 https://api.ipify.org; echo
+    cmd "docker port geth / lighthouse (published ports: P2P on all interfaces, RPC on 127.0.0.1 only)"
     docker port geth
     docker port lighthouse
     cmd "ss -tulpn (listening sockets of the node)"
     sudo -n ss -tulpn 2>/dev/null | grep -E ':(30303|9000|9001|8545|8551|5052)\b' \
         || ss -tuln | grep -E ':(30303|9000|9001|8545|8551|5052)\b'
-    cmd "public IPv4"
-    curl -4 -s --max-time 10 https://api.ipify.org; echo
-    cmd "host firewall"
-    if command -v ufw >/dev/null; then sudo -n ufw status verbose 2>&1; else echo "no ufw"; fi
-    cmd "RPC ports must NOT answer on the public IP (expected: connection refused / timeout)"
-    PUB=$(curl -4 -s --max-time 10 https://api.ipify.org)
-    for p in 8545 8551 5052; do
-        if timeout 5 bash -c "</dev/tcp/$PUB/$p" 2>/dev/null; then
-            echo "$PUB:$p OPEN  <-- should not be reachable"
-        else
-            echo "$PUB:$p not reachable (good)"
-        fi
-    done
-    echo "(Testing your own public IP from inside the LAN depends on NAT loopback;"
-    echo " the proof that P2P ports are reachable from outside is the inbound peer count"
-    echo " in 01-execution-layer.txt and 02-consensus-layer.txt.)"
-} > evidence/05-networking.txt 2>&1
+    cmd "iptables -t nat -S DOCKER (Docker's own NAT: public port -> container)"
+    sudo -n iptables -t nat -S DOCKER 2>&1
+    cmd "egress filter: no traffic to private address ranges (scripts/egress-filter.sh)"
+    sudo -n iptables -S OUTPUT 2>&1 | grep DROP
+    sudo -n iptables -S DOCKER-USER 2>&1 | grep DROP
+    echo
+    echo "The inbound firewall is the Hetzner Cloud Firewall in front of the server;"
+    echo "its rules and an external port test are in 06-external-check.txt."
+} > "$OUT/05-networking.txt" 2>&1
 
-echo "evidence written:"
-ls -l evidence/
+# Full peer lists as raw data for the appendix. The geth console prints the
+# JSON as a quoted string, so unwrap it first.
+attach 'JSON.stringify(admin.peers)' | jq -r '.' | jq '.' > "$OUT/el-peers.json"
+beacon '/eth/v1/node/peers?state=connected' | jq '.' > "$OUT/cl-peers.json"
+
+echo "evidence written to $OUT:"
+ls -l "$OUT"

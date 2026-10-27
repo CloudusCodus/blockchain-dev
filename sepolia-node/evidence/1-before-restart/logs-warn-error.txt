@@ -1,0 +1,85 @@
+
+===== geth
+WARN [10-26|15:12:55.136] Ignoring already known beacon payload    number=11,998,803 hash=59e8c5..cd32e8 age=55s
+WARN [10-26|15:12:55.139] Ignoring already known beacon payload    number=11,998,803 hash=59e8c5..cd32e8 age=55s
+WARN [10-26|15:12:55.140] Ignoring already known beacon payload    number=11,998,803 hash=59e8c5..cd32e8 age=55s
+WARN [10-26|15:12:55.141] Ignoring already known beacon payload    number=11,998,803 hash=59e8c5..cd32e8 age=55s
+WARN [10-26|15:12:55.142] Ignoring already known beacon payload    number=11,998,803 hash=59e8c5..cd32e8 age=55s
+WARN [10-26|15:13:17.300] Ignoring already known beacon payload    number=11,998,808 hash=1b3ef9..fc510e age=17s
+WARN [10-26|15:14:50.847] Ignoring already known beacon payload    number=11,998,815 hash=2eef43..ab4265 age=26s
+WARN [10-26|15:14:50.849] Ignoring already known beacon payload    number=11,998,815 hash=2eef43..ab4265 age=26s
+WARN [10-26|15:15:54.337] Ignoring already known beacon payload    number=11,998,820 hash=276e7f..7785c8 age=30s
+WARN [10-26|15:15:54.339] Ignoring already known beacon payload    number=11,998,820 hash=276e7f..7785c8 age=30s
+WARN [10-26|15:15:54.342] Ignoring already known beacon payload    number=11,998,820 hash=276e7f..7785c8 age=30s
+WARN [10-26|15:17:11.618] Ignoring already known beacon payload    number=11,998,826 hash=e291b2..cdd741 age=35s
+WARN [10-26|15:17:11.621] Ignoring already known beacon payload    number=11,998,826 hash=e291b2..cdd741 age=35s
+WARN [10-26|15:17:28.863] Ignoring already known beacon payload    number=11,998,828 hash=7c4122..9728b0 age=28s
+WARN [10-26|15:17:48.644] Ignoring already known beacon payload    number=11,998,831 hash=65b372..31b7b3 age=12s
+WARN [10-26|15:18:17.746] Ignoring already known beacon payload    number=11,998,833 hash=b5c4ef..6ebc74 age=17s
+WARN [10-26|15:18:38.562] Ignoring already known beacon payload    number=11,998,835 hash=f82e37..cbb4a7 age=14s
+
+===== lighthouse
+Oct 26 08:07:31.973 ERROR Error fetching payload envelope for peer      block_root: 0xe9667dc9a19cd3c8b10c2fc6df845658b583341458288376f3196cff81d1b292, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x75617d22e0675d652507ccea51ff96addcd6ba503b836f2efcdac94094a81c78))
+Oct 26 14:33:58.084 ERROR Error fetching payload envelope for peer      block_root: 0x5266b1efaa321d0d20ce7d18b2f65d894e8eba0e1b88845f37598155f536446f, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0xa03d58a0ac2f21f65c8facab37cb67e11f3550e8b893a33eeb629127ab2fea33))
+Oct 26 15:12:09.918 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:12:09.918 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:12:09.918 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x26aa7eb8d8958cc0baa193aa4439124cf40326bb219182ea25ad330d3ec23011, envelope_source: gossip
+Oct 26 15:12:20.516 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:12:20.516 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:12:20.516 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x26aa7eb8d8958cc0baa193aa4439124cf40326bb219182ea25ad330d3ec23011, envelope_source: lookup
+Oct 26 15:12:21.000 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+Oct 26 15:12:28.894 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:12:28.894 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:12:28.894 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x26aa7eb8d8958cc0baa193aa4439124cf40326bb219182ea25ad330d3ec23011, envelope_source: lookup
+Oct 26 15:12:33.000 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+Oct 26 15:12:36.905 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:12:36.905 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:12:36.905 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x26aa7eb8d8958cc0baa193aa4439124cf40326bb219182ea25ad330d3ec23011, envelope_source: lookup
+Oct 26 15:12:45.000 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+Oct 26 15:12:45.104 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:12:45.104 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:12:45.104 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x26aa7eb8d8958cc0baa193aa4439124cf40326bb219182ea25ad330d3ec23011, envelope_source: lookup
+Oct 26 15:14:32.314 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:14:32.314 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:14:32.314 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x38a9c7b25d3d6db1a2b7edc19607605c1a1ffdd1fa5e46fcb2fa20003d553e2a, envelope_source: gossip
+Oct 26 15:14:44.306 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:14:44.306 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:14:44.306 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x38a9c7b25d3d6db1a2b7edc19607605c1a1ffdd1fa5e46fcb2fa20003d553e2a, envelope_source: lookup
+Oct 26 15:14:45.000 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+Oct 26 15:15:32.853 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:15:32.853 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:15:32.853 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0xd30ffe64f1b9c3c1edd482a26a0c7486bee2216cf524189ebad7db257b50e1ce, envelope_source: gossip
+Oct 26 15:15:44.148 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:15:44.148 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:15:44.148 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0xd30ffe64f1b9c3c1edd482a26a0c7486bee2216cf524189ebad7db257b50e1ce, envelope_source: lookup
+Oct 26 15:15:52.187 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:15:52.187 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:15:52.187 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0xd30ffe64f1b9c3c1edd482a26a0c7486bee2216cf524189ebad7db257b50e1ce, envelope_source: lookup
+Oct 26 15:16:46.274 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+Oct 26 15:16:47.275 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:16:57.000 WARN  State advance routine overloaded              msg: "system resources may be overloaded"
+Oct 26 15:16:58.437 WARN  Banning builder that failed to reveal its payload  builder_index: 0, pubkey: 0x8388b31d7459d384c6fb085ac7fae2e13cb64673774cea381d309feb13f10624175daebb0c1d5a965695f10bc6a96e76, block_slot: 11441183, block_root: 0x8bc5e354a9c41675c1379afcd1133988d61c2c7b2682528127524a99c5efd5a3, block_weight: 2126000000000, quorum: 1136681250000, ban_slots: 32
+Oct 26 15:17:05.850 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:17:05.850 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:17:05.850 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x8bc5e354a9c41675c1379afcd1133988d61c2c7b2682528127524a99c5efd5a3, envelope_source: gossip
+Oct 26 15:17:08.568 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:17:08.568 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:17:08.568 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x8bc5e354a9c41675c1379afcd1133988d61c2c7b2682528127524a99c5efd5a3, envelope_source: lookup
+Oct 26 15:17:23.821 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:17:23.821 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:17:23.821 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x00f71a042284b7a8dafd1340856eaeb4e68eb16a8625effe2301913efe83203c, envelope_source: lookup
+Oct 26 15:18:09.586 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:18:09.586 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:18:09.586 CRIT  Failed to update execution head               error: ExecutionForkChoiceUpdateFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))
+Oct 26 15:18:09.601 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:18:09.601 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:18:09.601 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0x2e6de0dd38075e116d61060cbeda646b8a653baa7a33b4d708ff9daa5c843466, envelope_source: gossip
+Oct 26 15:18:32.599 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:18:32.599 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }
+Oct 26 15:18:32.599 WARN  Execution payload envelope rejected           reason: "EnvelopeError(ExecutionPayloadError(RequestFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))))", block_root: 0xc0f2da3b8df840941123fde02d6753209faad6dcfa381bad1f92eafd4f063599, envelope_source: gossip
+Oct 26 16:43:44.475 ERROR Error fetching payload envelope for peer      block_root: 0x98a2c96267d3f4311d05f37b0759176cf95f8d33ec726f02779ecf1a64fb6ee8, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x10f203f97432a229d51ceb6630e4653ed7a80d95ac52c049e8e5c6d55c13422f))
+Oct 26 19:05:31.401 ERROR Error fetching payload envelope for peer      block_root: 0xc1c9bf659b19274b938e23f3fad8dea447da97527c9fd20a3bfd9d99d2af9037, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0xeb0ab88aba00e38051969eec41a8a3ed66a1f4a35a8819e261ca9f693e2b9ccc))
+Oct 26 19:23:19.348 ERROR Error fetching payload envelope for peer      block_root: 0xedbe3ae95192ca5661490739b3b32c78e2e2f1ad873f9e168825cc4c50ed0d11, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x96341b8830be7e5f0a8183a23db95359799654407d81c2b42cd06ab48f6caa7b))
+Oct 26 20:47:12.059 ERROR Error fetching payload envelope for peer      block_root: 0xe92ef6edf07527b28222cf8a8cf5d78dc75b108e5d7149312244596017732ae3, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0xcb0c35c657e563ebde920a31d686d7681c2b61a45658d9aa6500cc18d2e31b62))
+Oct 26 21:54:17.806 ERROR Error fetching payload envelope for peer      block_root: 0xe4a2c025928ed3a5528235a551ce9f1ea0608fa3a3e4ad3f916a53eb87d7c28e, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x9872bb3c357cb4d922da6cf2c0db85ea0b51a413b18b54b6c0368555346e8e37))
+Oct 27 05:11:48.646 ERROR Error fetching payload envelope for peer      block_root: 0x098053380fd929418c9e86c1d490df5b19fb53ccd8d3bd9dbbafa4f4a3a731f9, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x23fc24c4ea0c85056393969894851619041512f27591aaf34afcbf6ad5d1a3df))

@@ -1,0 +1,16 @@
+
+===== geth
+WARN [10-27|06:49:16.208] Sanitizing invalid node buffer size      provided=1.00GiB updated=256.00MiB
+WARN [10-27|06:49:37.277] Ignoring already known beacon payload    number=12,003,430 hash=8110b1..4d79b1 age=37s
+
+===== lighthouse
+Oct 27 06:49:13.346 WARN  Fork boundaries are not well aligned / multiples of 256  info: "This may cause issues as fork boundaries do not align with the start of sync committee period.", misaligned_forks: [(Altair, Epoch(50)), (Bellatrix, Epoch(100))]
+Oct 27 06:49:16.644 WARN  State cache missed                            state_root: 0x5a78e889f9634a1517e454f0c3e57f46e94c8bfc3d4a9ce24be13571fe10afbb
+Oct 27 06:49:16.770 WARN  State cache missed                            state_root: 0xff91fbd2ec8dfa683757c4b140730ffc4778e67900acd982ec8dbfa6b5f31887, block_root: 0xe773164ee4007a37a021f376752134825b88d1d821a16ca60c7ae8dc9042265b
+Oct 27 06:49:16.821 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:49:16.821 WARN  Execution engine call failed                  error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:49:16.821 WARN  Error whilst processing payload status        error: Api { error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect)) }
+Oct 27 06:49:16.821 WARN  Failed to update head on execution engines    error: ExecutionForkChoiceUpdateFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect)) }))
+Oct 27 06:49:16.822 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:49:16.822 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: request, detail: client error (Connect))
+Oct 27 06:49:30.000 WARN  Low peer count                                peer_count: "1"

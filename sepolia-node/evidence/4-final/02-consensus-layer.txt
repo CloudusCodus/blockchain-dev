@@ -1,0 +1,80 @@
+# Consensus layer (Lighthouse)
+# collected 2026-10-27T06:55:27Z
+
+## Lighthouse running
+
+$ docker ps --filter name=^lighthouse$
+NAMES        IMAGE                    STATUS
+lighthouse   sigp/lighthouse:v8.3.2   Up 6 minutes
+
+$ GET /eth/v1/node/version
+Lighthouse/v8.3.2/x86_64-linux
+
+$ GET /eth/v1/node/health  (200 = synced and ready)
+HTTP 200
+
+## Lighthouse synchronized
+
+$ GET /eth/v1/node/syncing
+{
+  "is_syncing": false,
+  "is_optimistic": false,
+  "el_offline": false,
+  "head_slot": "11445877",
+  "sync_distance": "0"
+}
+
+$ head slot (own node vs. public reference https://ethereum-sepolia-beacon-api.publicnode.com)
+own node:  11445877
+reference: 11445877
+difference: 0 slots
+
+$ GET /eth/v1/beacon/states/head/finality_checkpoints
+{"previous_justified":{"epoch":"357681","root":"0xa905aeba16ab1e8faa2f47c34a44f6bab6b9eef823ae5e254287c7074a4a5c8a"},"current_justified":{"epoch":"357682","root":"0xa68b7c6b78a6a29e0ea64345ed4c35261065135dbad8c070b5236079e92b06e1"},"finalized":{"epoch":"357681","root":"0xa905aeba16ab1e8faa2f47c34a44f6bab6b9eef823ae5e254287c7074a4a5c8a"}}
+
+## Consensus peers
+
+$ GET /eth/v1/node/peer_count
+{
+  "connected": "77",
+  "connecting": "0",
+  "disconnected": "46",
+  "disconnecting": "0"
+}
+
+## Inbound / outbound connectivity
+
+$ GET /eth/v1/node/peers?state=connected, counted by direction
+{
+  "inbound": 56,
+  "outbound": 21
+}
+
+$ GET /eth/v1/node/identity (advertised ENR and addresses)
+{
+  "peer_id": "16Uiu2HAkvF92b3Uo5rL465LZ9k9B1C3VbuvwCnVCeBQrcHBx6BNL",
+  "enr": "enr:-NK4QOyrmYTOatKlH8c2KjHaEqtxEjlX5ngmvZB5ZvbOpKo-XJHC6V52HcJ0_eSFvIlo3n_EW4lKypyynYlIDSTgqZgJh2F0dG5ldHOIAAAwAAAAAACDY2djBIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCEismbRYNuZmSEAAAAAIRxdWljgiMpiXNlY3AyNTZrMaECDCjhqc7s_VxYWf2UqjA5JdIQQLU2ZxGK97X3RWkXTDWIc3luY25ldHMAg3RjcIIjKIN1ZHCCIyg",
+  "p2p_addresses": [
+    "/ip4/138.201.155.69/tcp/9000/p2p/16Uiu2HAkvF92b3Uo5rL465LZ9k9B1C3VbuvwCnVCeBQrcHBx6BNL"
+  ],
+  "discovery_addresses": [
+    "/ip4/138.201.155.69/udp/9000/p2p/16Uiu2HAkvF92b3Uo5rL465LZ9k9B1C3VbuvwCnVCeBQrcHBx6BNL"
+  ]
+}
+
+$ first 15 connected peers
+inbound	/ip4/54.148.216.185/udp/36399/quic-v1
+inbound	/ip4/54.175.133.188/udp/43312/quic-v1
+inbound	/ip4/54.95.146.62/udp/9228/quic-v1
+inbound	/ip4/3.36.90.115/udp/16231/quic-v1
+inbound	/ip4/18.138.146.236/udp/11656/quic-v1
+inbound	/ip4/148.113.199.46/udp/9101/quic-v1
+inbound	/ip4/3.34.219.176/udp/39256/quic-v1
+outbound	/ip4/188.40.58.182/udp/9001/quic-v1/p2p/16Uiu2HAm1MJCEA9KvkknYz9QuTn53rDqhkZmNMtsHUyDsFVVZdN5
+inbound	/ip4/91.210.101.151/udp/36494/quic-v1
+inbound	/ip4/15.204.111.158/udp/41998/quic-v1
+inbound	/ip4/23.227.222.185/udp/1930/quic-v1
+inbound	/ip4/54.238.91.31/udp/13000/quic-v1
+inbound	/ip4/162.19.138.136/udp/24828/quic-v1
+inbound	/ip4/65.108.10.182/udp/36921/quic-v1
+inbound	/ip4/15.235.218.129/udp/21368/quic-v1

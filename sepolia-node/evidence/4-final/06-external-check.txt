@@ -1,0 +1,20 @@
+# External check from a host outside Hetzner, 2026-10-27T06:55:45Z
+
+$ Hetzner Cloud Firewall rules of the node (GET /v1/firewalls, admin address masked)
+firewall firewall-1
+  in tcp 22  from <admin IPv4>/32
+  in tcp 30303  from 0.0.0.0/0, ::/0
+  in udp 30303  from 0.0.0.0/0, ::/0
+  in tcp 9000  from 0.0.0.0/0, ::/0
+  in udp 9000  from 0.0.0.0/0, ::/0
+  in udp 9001  from 0.0.0.0/0, ::/0
+Everything not listed is dropped inbound. Outbound has no rules, so it is allowed.
+
+$ TCP connect test against 138.201.155.69 (expected: P2P open, RPC closed)
+30303/tcp open    expected open    OK
+9000/tcp open    expected open    OK
+8545/tcp closed  expected closed  OK
+8551/tcp closed  expected closed  OK
+5052/tcp closed  expected closed  OK
+(UDP 30303/9000/9001 cannot be tested with a plain connect; the inbound peers in
+ 01-execution-layer.txt and 02-consensus-layer.txt show that they are reachable.)

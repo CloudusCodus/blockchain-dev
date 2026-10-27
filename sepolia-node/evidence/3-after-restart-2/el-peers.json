@@ -1,0 +1,152 @@
+[
+  {
+    "enode": "enode://48b3fe93a418c6d4028cc0c4bf7b8bd017e93cf7ff2260440d3b625a2a30819f1694c3037f5c6b7f46d0d3e9751d295662d755cdeb613521c2f997b5d562e24c@217.198.128.204:62390",
+    "id": "28d0b4a77c6e066f16328a889155bd195f07f391adafe9f6d852c40f80ce82fe",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-arm64/go1.27.3",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "217.198.128.204:62390",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003434,
+        "latestBlockHash": "0x52b66f9beb537d68929b9d72a0c43b09960abdcf5a7722829e3f27ef388e5785"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://5f9ae5ece5b0efe157a1ddecc62c266deaaaaaff724b9251078e07801d640ec90c70a6993f38acc642507d8bc08c32d17c6074d5a61cfb31c071c8db73413314@64.118.250.82:48632",
+    "id": "28d57747623ebb57485b3800021ff072475b149c6200f5eb8de38e8cf574217f",
+    "name": "Geth/v1.17.8-stable-a5790770/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "64.118.250.82:48632",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003433,
+        "latestBlockHash": "0xa677027ae031e84646721b94f5e234e8eff63ab4ef9b4a91584e94497cfc2cc5"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://b8e4bc7ce51de006ff4fd68f8f27e39b8cfbb5b39e851a58b8f849136e1be19da29a710613091b9bae84873cf5280b94213ecbb06f869039e18b2ec488c0e9dc@162.43.189.121:33274",
+    "id": "5957a2c94ce6e8cfd6e0665fb1820ca759d88b045c9c2da827dd518a4fa9ccd9",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "162.43.189.121:33274",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003433,
+        "latestBlockHash": "0xa677027ae031e84646721b94f5e234e8eff63ab4ef9b4a91584e94497cfc2cc5"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://4ececf01b2209c3cc5188482fbff0d1cbcad3c1274b1c973cfa54bfaa73a63fbfff4abe650c199be31ceddb4a730b21837109af15f015dee214fcda94e4a2ea6@15.235.218.129:36494",
+    "id": "b80109d31c7b7797bacf3cf337e8054cb781c8ffbae7f23dd3970f54abe75bfb",
+    "name": "Geth/v1.17.7-stable-3d858f85/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "15.235.218.129:36494",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 1450409,
+        "latestBlock": 12003433,
+        "latestBlockHash": "0xa677027ae031e84646721b94f5e234e8eff63ab4ef9b4a91584e94497cfc2cc5"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://6de5c02d96ad2f4fe38bdf3a063d08a6788dd813fbcc141fc2a821ad587bbf8e326a13f798c85f0c5e775e44d5ecbd588300f4002b860d9eb8ee62aa73c580ae@4.36.26.74:53470",
+    "id": "f09a8a0661dd75103ef737496010acd54636ba89a7f50547d02f9c36412c44e6",
+    "name": "Geth/v1.17.7-stable-3d858f85/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "4.36.26.74:53470",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003436,
+        "latestBlockHash": "0x4bb9b4a6bc3cacda3ddaeb0770bada5e697ac8e954394488dcb4dc01f784b240"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  }
+]

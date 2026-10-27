@@ -1,0 +1,60 @@
+# Infrastructure
+# collected 2026-10-27T06:47:06Z
+
+## Docker containers running
+
+$ docker compose ps
+NAME         IMAGE                         COMMAND                  SERVICE      CREATED        STATUS        PORTS
+geth         ethereum/client-go:v1.17.10   "geth --sepolia --da…"   geth         44 hours ago   Up 44 hours   127.0.0.1:8545->8545/tcp, 8546/tcp, 0.0.0.0:30303->30303/tcp, 0.0.0.0:30303->30303/udp, [::]:30303->30303/tcp, [::]:30303->30303/udp
+lighthouse   sigp/lighthouse:v8.3.2        "lighthouse bn --net…"   lighthouse   44 hours ago   Up 44 hours   127.0.0.1:5052->5052/tcp, 0.0.0.0:9000->9000/tcp, 0.0.0.0:9000-9001->9000-9001/udp, [::]:9000->9000/tcp, [::]:9000-9001->9000-9001/udp
+
+$ docker stats --no-stream
+NAME         CPU %     MEM USAGE / LIMIT     NET I/O          BLOCK I/O
+geth         20.08%    7.984GiB / 15.24GiB   291GB / 71.4GB   843GB / 1.97TB
+lighthouse   18.74%    1.448GiB / 15.24GiB   96GB / 61.4GB    68.2GB / 316GB
+
+## Persistent blockchain data
+
+$ docker inspect (mounts)
+/geth  /srv/sepolia/jwt -> /jwt (bind)  /srv/sepolia/data/geth -> /data (bind)
+/lighthouse  /srv/sepolia/data/lighthouse -> /data (bind)  /srv/sepolia/jwt -> /jwt (bind)
+
+$ du -sh ./data/*
+405G	./data/geth
+17G	./data/lighthouse
+16K	./data/lost+found
+
+$ df -h ./data
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdb        1.5T  421G  980G  31% /srv/sepolia/data
+
+Restart test: see 04-restart-test.txt in the snapshots after a restart (scripts/restart-test.sh)
+
+## Errors in the logs (last 24 h)
+
+$ docker logs --since 24h geth | count by level
+  14333 INFO
+     17 WARN
+
+$ docker logs --since 24h geth | grep -E 'CRIT|FATAL|ERROR|ERRO' (last 20)
+(none)
+
+$ docker logs --since 24h lighthouse | count by level
+      1 CRIT
+      9 ERROR
+  29292 INFO
+     54 WARN
+
+$ docker logs --since 24h lighthouse | grep -E 'CRIT|FATAL|ERROR|ERRO' (last 20)
+Oct 26 08:07:31.973 ERROR Error fetching payload envelope for peer      block_root: 0xe9667dc9a19cd3c8b10c2fc6df845658b583341458288376f3196cff81d1b292, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x75617d22e0675d652507ccea51ff96addcd6ba503b836f2efcdac94094a81c78))
+Oct 26 14:33:58.084 ERROR Error fetching payload envelope for peer      block_root: 0x5266b1efaa321d0d20ce7d18b2f65d894e8eba0e1b88845f37598155f536446f, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0xa03d58a0ac2f21f65c8facab37cb67e11f3550e8b893a33eeb629127ab2fea33))
+Oct 26 15:16:47.275 ERROR Error during execution engine upcheck         error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out)
+Oct 26 15:18:09.586 CRIT  Failed to update execution head               error: ExecutionForkChoiceUpdateFailed(EngineError(Api { error: HttpClient(url: http://geth:8551/, kind: timeout, detail: operation timed out) }))
+Oct 26 16:43:44.475 ERROR Error fetching payload envelope for peer      block_root: 0x98a2c96267d3f4311d05f37b0759176cf95f8d33ec726f02779ecf1a64fb6ee8, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x10f203f97432a229d51ceb6630e4653ed7a80d95ac52c049e8e5c6d55c13422f))
+Oct 26 19:05:31.401 ERROR Error fetching payload envelope for peer      block_root: 0xc1c9bf659b19274b938e23f3fad8dea447da97527c9fd20a3bfd9d99d2af9037, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0xeb0ab88aba00e38051969eec41a8a3ed66a1f4a35a8819e261ca9f693e2b9ccc))
+Oct 26 19:23:19.348 ERROR Error fetching payload envelope for peer      block_root: 0xedbe3ae95192ca5661490739b3b32c78e2e2f1ad873f9e168825cc4c50ed0d11, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x96341b8830be7e5f0a8183a23db95359799654407d81c2b42cd06ab48f6caa7b))
+Oct 26 20:47:12.059 ERROR Error fetching payload envelope for peer      block_root: 0xe92ef6edf07527b28222cf8a8cf5d78dc75b108e5d7149312244596017732ae3, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0xcb0c35c657e563ebde920a31d686d7681c2b61a45658d9aa6500cc18d2e31b62))
+Oct 26 21:54:17.806 ERROR Error fetching payload envelope for peer      block_root: 0xe4a2c025928ed3a5528235a551ce9f1ea0608fa3a3e4ad3f916a53eb87d7c28e, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x9872bb3c357cb4d922da6cf2c0db85ea0b51a413b18b54b6c0368555346e8e37))
+Oct 27 05:11:48.646 ERROR Error fetching payload envelope for peer      block_root: 0x098053380fd929418c9e86c1d490df5b19fb53ccd8d3bd9dbbafa4f4a3a731f9, error: EnvelopeStreamerError(PayloadBodyMissingBlockAccessList(0x23fc24c4ea0c85056393969894851619041512f27591aaf34afcbf6ad5d1a3df))
+
+All WARN/ERROR/CRIT lines of the last 24 h: logs-warn-error.txt

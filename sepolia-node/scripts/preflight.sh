@@ -29,7 +29,9 @@ have() { command -v "$1" >/dev/null 2>&1; }
     df -h "$DATA_DIR"
     AVAIL_GB=$(df -BG --output=avail "$DATA_DIR" | tail -1 | tr -dc '0-9')
     if [ "${AVAIL_GB:-0}" -lt 650 ]; then
-        echo "WARNING: only ${AVAIL_GB} GB free, Sepolia needs ~570 GB (pruned) and keeps growing"
+        # ~570 GB was measured for history=postprague on a supernode (Oct 2026);
+        # postosaka without supernode needs less, but no measured figure exists
+        echo "WARNING: only ${AVAIL_GB} GB free, Sepolia postprague+supernode needs ~570 GB; postosaka needs less (unmeasured), watch the growth"
     else
         echo "OK: ${AVAIL_GB} GB free"
     fi

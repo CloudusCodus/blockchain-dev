@@ -1,0 +1,43 @@
+# Execution layer (geth)
+# collected 2026-10-27T06:55:27Z
+
+## Geth running
+
+$ docker ps --filter name=^geth$
+NAMES     IMAGE                         STATUS
+geth      ethereum/client-go:v1.17.10   Up 6 minutes
+
+$ web3_clientVersion
+Geth/v1.17.10-stable-1df30b18/linux-amd64/go1.27.3
+
+## Geth synchronized
+
+$ eth_syncing  (false = synced)
+false
+
+## Current block number
+
+$ eth_blockNumber (own node vs. public reference https://ethereum-sepolia-rpc.publicnode.com)
+own node:  12003462
+reference: 12003462
+difference: 0 blocks
+
+$ latest block of own node
+number 0xb72886 hash 0x1f01dc4bd25cf85ef697feb9652ce1a7c146e135f120314b284560cf3d5e2530 timestamp 0x6ae04adc
+
+## Execution peers
+
+$ net_peerCount
+29
+
+## Inbound / outbound connectivity
+
+$ admin.peers grouped by direction (IPC)
+"{\"total\":29,\"inbound\":27,\"outbound\":2}"
+
+$ admin.nodeInfo (advertised enode with public IP and port)
+"enode://25868022db409a6de72aa942a8fc0f5f226ee7ce4495e11c421ea1f44aa7c4f277a5696a6192cde0c5f49779ee03e72bc208dcecd51ceee6a3c14ad470b1d633@138.201.155.69:30303"
+"{\"discovery\":30303,\"listener\":30303}"
+
+$ first 15 peers: client, remote address, inbound
+"reth/v0.8.2  94.112.213.128:52918  inbound=true\nGeth/pubnode  43.128.242.249:45594  inbound=true\nGeth/v1.17.7-stable-3d858f85  34.172.203.37:1024  inbound=true\nGeth/v1.17.9-stable-9dffe6e9  69.168.226.241:52366  inbound=true\nGeth/v1.17.9-stable-9dffe6e9  217.198.128.204:62390  inbound=true\nGeth/v1.17.8-stable-a5790770  64.118.250.82:48632  inbound=true\nNethermind/v2.1.0+b3e7e84c-hp  138.2.155.222:13707  inbound=true\nNethermind/v2.2.2+be201120-f  8.5.2.30:55954  inbound=true\nNethermind/v2.1.0+b3e7e84c-f  4.208.104.137:31460  inbound=true\nGeth/v1.17.9-stable-9dffe6e9  172.161.46.4:30303  inbound=false\nGeth/v1.17.8-unstable-b10c4ecc-20261008  3.220.167.114:51054  inbound=true\nNethermind/v2.2.2+be201120-h  164.152.161.131:35432  inbound=true\nGeth/v1.17.9-stable-9dffe6e9  134.65.194.144:42596  inbound=true\nGeth/v1.17.8-stable-a5790770  44.196.15.59:53051  inbound=true\nGeth/v1.17.9-stable-9dffe6e9  162.43.189.121:33274  inbound=true"

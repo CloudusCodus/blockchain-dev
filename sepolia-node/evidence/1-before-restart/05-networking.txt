@@ -1,0 +1,64 @@
+# Networking
+# collected 2026-10-27T06:47:06Z
+
+$ ip -br addr (the public addresses sit directly on the server's interface: no NAT by the provider)
+lo               UNKNOWN        127.0.0.1/8 ::1/128 
+eth0             UP             138.201.155.69/32 metric 100 2a01:4f8:c17:4c0c::1/64 fe80::9000:aff:fe45:acf1/64 
+docker0          DOWN           172.17.0.1/16 
+br-aecc3ffb33ef  UP             172.18.0.1/16 fe80::80e5:74ff:fed3:8298/64 
+veth2ed80be@if2  UP             fe80::1ce9:a9ff:fe80:8f45/64 
+veth3c8d32d@if2  UP             fe80::c47f:fcff:fef8:d558/64 
+
+$ public IPv4 as seen from the Internet
+138.201.155.69
+
+$ docker port geth / lighthouse (published ports: P2P on all interfaces, RPC on 127.0.0.1 only)
+8545/tcp -> 127.0.0.1:8545
+30303/tcp -> 0.0.0.0:30303
+30303/tcp -> [::]:30303
+30303/udp -> 0.0.0.0:30303
+30303/udp -> [::]:30303
+5052/tcp -> 127.0.0.1:5052
+9000/tcp -> 0.0.0.0:9000
+9000/tcp -> [::]:9000
+9000/udp -> 0.0.0.0:9000
+9000/udp -> [::]:9000
+9001/udp -> 0.0.0.0:9001
+9001/udp -> [::]:9001
+
+$ ss -tulpn (listening sockets of the node)
+udp   UNCONN 0      0                  0.0.0.0:30303      0.0.0.0:*    users:(("docker-proxy",pid=3830,fd=7))                  
+udp   UNCONN 0      0                  0.0.0.0:9000       0.0.0.0:*    users:(("docker-proxy",pid=3967,fd=7))                  
+udp   UNCONN 0      0                  0.0.0.0:9001       0.0.0.0:*    users:(("docker-proxy",pid=3992,fd=7))                  
+udp   UNCONN 0      0                     [::]:30303         [::]:*    users:(("docker-proxy",pid=3836,fd=7))                  
+udp   UNCONN 0      0                     [::]:9000          [::]:*    users:(("docker-proxy",pid=3973,fd=7))                  
+udp   UNCONN 0      0                     [::]:9001          [::]:*    users:(("docker-proxy",pid=3998,fd=7))                  
+tcp   LISTEN 0      4096               0.0.0.0:9000       0.0.0.0:*    users:(("docker-proxy",pid=3943,fd=7))                  
+tcp   LISTEN 0      4096             127.0.0.1:8545       0.0.0.0:*    users:(("docker-proxy",pid=3791,fd=7))                  
+tcp   LISTEN 0      4096               0.0.0.0:30303      0.0.0.0:*    users:(("docker-proxy",pid=3806,fd=7))                  
+tcp   LISTEN 0      4096             127.0.0.1:5052       0.0.0.0:*    users:(("docker-proxy",pid=3929,fd=7))                  
+tcp   LISTEN 0      4096                  [::]:9000          [::]:*    users:(("docker-proxy",pid=3949,fd=7))                  
+tcp   LISTEN 0      4096                  [::]:30303         [::]:*    users:(("docker-proxy",pid=3813,fd=7))                  
+
+$ iptables -t nat -S DOCKER (Docker's own NAT: public port -> container)
+-N DOCKER
+-A DOCKER -d 127.0.0.1/32 ! -i br-aecc3ffb33ef -p tcp -m tcp --dport 8545 -j DNAT --to-destination 172.18.0.2:8545
+-A DOCKER ! -i br-aecc3ffb33ef -p tcp -m tcp --dport 30303 -j DNAT --to-destination 172.18.0.2:30303
+-A DOCKER ! -i br-aecc3ffb33ef -p udp -m udp --dport 30303 -j DNAT --to-destination 172.18.0.2:30303
+-A DOCKER -d 127.0.0.1/32 ! -i br-aecc3ffb33ef -p tcp -m tcp --dport 5052 -j DNAT --to-destination 172.18.0.3:5052
+-A DOCKER ! -i br-aecc3ffb33ef -p tcp -m tcp --dport 9000 -j DNAT --to-destination 172.18.0.3:9000
+-A DOCKER ! -i br-aecc3ffb33ef -p udp -m udp --dport 9000 -j DNAT --to-destination 172.18.0.3:9000
+-A DOCKER ! -i br-aecc3ffb33ef -p udp -m udp --dport 9001 -j DNAT --to-destination 172.18.0.3:9001
+
+$ egress filter: no traffic to private address ranges (scripts/egress-filter.sh)
+-A OUTPUT -d 100.64.0.0/10 -o eth0 -j DROP
+-A OUTPUT -d 192.168.0.0/16 -o eth0 -j DROP
+-A OUTPUT -d 172.16.0.0/12 -o eth0 -j DROP
+-A OUTPUT -d 10.0.0.0/8 -o eth0 -j DROP
+-A DOCKER-USER -d 100.64.0.0/10 -o eth0 -j DROP
+-A DOCKER-USER -d 192.168.0.0/16 -o eth0 -j DROP
+-A DOCKER-USER -d 172.16.0.0/12 -o eth0 -j DROP
+-A DOCKER-USER -d 10.0.0.0/8 -o eth0 -j DROP
+
+The inbound firewall is the Hetzner Cloud Firewall in front of the server;
+its rules and an external port test are in 06-external-check.txt.

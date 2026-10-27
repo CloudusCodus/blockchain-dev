@@ -1,0 +1,43 @@
+# Execution layer (geth)
+# collected 2026-10-27T06:50:23Z
+
+## Geth running
+
+$ docker ps --filter name=^geth$
+NAMES     IMAGE                         STATUS
+geth      ethereum/client-go:v1.17.10   Up About a minute
+
+$ web3_clientVersion
+Geth/v1.17.10-stable-1df30b18/linux-amd64/go1.27.3
+
+## Geth synchronized
+
+$ eth_syncing  (false = synced)
+false
+
+## Current block number
+
+$ eth_blockNumber (own node vs. public reference https://ethereum-sepolia-rpc.publicnode.com)
+own node:  12003429
+reference: 12003436
+difference: 7 blocks
+
+$ latest block of own node
+number 0xb72865 hash 0x4accbdc132b6462639f25c08560b040028ca5509e6b884711c760c353adfbd0f timestamp 0x6ae04950
+
+## Execution peers
+
+$ net_peerCount
+6
+
+## Inbound / outbound connectivity
+
+$ admin.peers grouped by direction (IPC)
+"{\"total\":6,\"inbound\":5,\"outbound\":1}"
+
+$ admin.nodeInfo (advertised enode with public IP and port)
+"enode://25868022db409a6de72aa942a8fc0f5f226ee7ce4495e11c421ea1f44aa7c4f277a5696a6192cde0c5f49779ee03e72bc208dcecd51ceee6a3c14ad470b1d633@138.201.155.69:30303"
+"{\"discovery\":30303,\"listener\":30303}"
+
+$ first 15 peers: client, remote address, inbound
+"Geth/v1.17.9-stable-9dffe6e9  217.198.128.204:62390  inbound=true\nGeth/v1.17.8-stable-a5790770  64.118.250.82:48632  inbound=true\nGeth/v1.17.9-stable-9dffe6e9  162.43.189.121:33274  inbound=true\nGeth/v1.17.7-stable-3d858f85  188.68.32.16:30405  inbound=false\nGeth/v1.17.7-stable-3d858f85  15.235.218.129:36494  inbound=true\nGeth/v1.17.7-stable-3d858f85  4.36.26.74:53470  inbound=true"

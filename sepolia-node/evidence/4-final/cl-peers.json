@@ -1,0 +1,546 @@
+{
+  "data": [
+    {
+      "peer_id": "16Uiu2HAmVjh1JTGdkMbKgjFdz3kUZcV1CoLZb8VcuV9P78ehvePB",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/54.148.216.185/udp/36399/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm1HFkB2gUNETcCZL2nKTtVz6NfPLM789rwkPkdYy9KvXB",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/54.175.133.188/udp/43312/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmVJGBPR1xMkmuh5fEns1wqfMfnTHj3m3CCETcS4UjH8td",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/54.95.146.62/udp/9228/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmByQ7sTwR2JtDK4EZHQW2PKJD9X2wvyxRNP7MWABd6LqA",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/3.36.90.115/udp/16231/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmJCB1xTZBwxRCikTtpiRWwFPyjqND2aR1ddAyoXVRQLuD",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/18.138.146.236/udp/11656/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkvnbGfvLfazzyztu39bvTRnCwicPoG48ZQYdGCULBgieW",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/148.113.199.46/udp/9101/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkxcUb3r53yZm8ep6JNRvK2KKz5Q3mtx1npdP6G7w56Mj7",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/3.34.219.176/udp/39256/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm1MJCEA9KvkknYz9QuTn53rDqhkZmNMtsHUyDsFVVZdN5",
+      "enr": "enr:-QEguECwsIKfbVOnJjJOjSuyLR6kp7JkRmImCAOdygavf-ldJB_cPsOM4blH-buFREQeF-EuewLMD3v-A34prVv-1O7vgZGHYXR0bmV0c4gAAAAAAGAAAINjZ2OBgIZjbGllbnTWikxpZ2h0aG91c2WKOC4zLjAtcmMuMIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCEvCg6toNpcDaQKgEE-AIhAQQAAAAAAAAAAoNuZmSEAAAAAIRxdWljgiMphXF1aWM2giMpiXNlY3AyNTZrMaECWAcqTX8EYCyTCRdIpScp4XVkc6SVeTtexoCZ7Rjp2paIc3luY25ldHMAg3RjcIIjKIR0Y3A2giMog3VkcIIjKIR1ZHA2giMo",
+      "last_seen_p2p_address": "/ip4/188.40.58.182/udp/9001/quic-v1/p2p/16Uiu2HAm1MJCEA9KvkknYz9QuTn53rDqhkZmNMtsHUyDsFVVZdN5",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkxXW81KGuk1rEDNon6g511TATEmo4Jpy5JipiGb9bg2jE",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/91.210.101.151/udp/36494/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmAYrHb6nyP6YHh9boNYmaTmHS9xkDGmM57p1PPY6TkqTd",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/15.204.111.158/udp/41998/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkuTeMKHP8Wn7o7BTZWa2tDyVwVUZhX4rD8JXd1e2s4RA1",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/23.227.222.185/udp/1930/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmPYbRZqYXfJiT7Kuy1EVAHFKWgqxSjXMNvwKt1bMBoR3P",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/54.238.91.31/udp/13000/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmKkrKgHfHW9GpyRR4msPBv3cyJtQYT9oKeddaNdB5vyE9",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/162.19.138.136/udp/24828/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmAqTNqiEyHYkqfg1vjXhoUzDVTs2gAJxMcURQLFP4rXhB",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/65.108.10.182/udp/36921/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm9XsgZHXjTEgr4Qgf3jUXkmbJzeV3iSxNAbq1JR8Dc1Vv",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/15.235.218.129/udp/21368/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm8vUusZA21eThSADEMQL183bCL6mHCYqnXyBTqWWrL5iW",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.133.20.147/udp/1024/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmLBV9bPDd4pQKVCm71e6NKLdb3Sdr8drqJQiThE116ZBu",
+      "enr": "enr:-QEAuEBLmr8kKA8OlBdHkBnG_8-cdMX4qk1c5evRoiojKZZjLAFSHdxhzTa1VSVE0IPoBjzgv7nAIARqaVWozcSIlpBhMIdhdHRuZXRziAAAwAAAAAAAg2NnYwSEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhMo9yjuDaXA2kCoDQAAAWgvMpJal__5zSCaDbmZkhAAAAACEcXVpY4I3FYVxdWljNoI3FolzZWNwMjU2azGhA2_Ry46Rwls_ziGeLFGzikPwaGQmSpLqTV96doxDaocAiHN5bmNuZXRzAIN0Y3CCNxWEdGNwNoI3FYN1ZHCCNxaEdWRwNoI3FQ",
+      "last_seen_p2p_address": "/ip4/202.61.202.59/udp/14101/quic-v1/p2p/16Uiu2HAmLBV9bPDd4pQKVCm71e6NKLdb3Sdr8drqJQiThE116ZBu",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmQGXzZAqkcjuLB2Bme1DP2crSZVhmg5gfF3KwAGkyVtL9",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.66.203.69/udp/1536/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmRAMC6gx9LK9AF6ng5Dds4gEQYEyCVnYAw8y6Qe6Qi5at",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/104.155.228.166/udp/1024/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmPdnvsJLm8Xnyc7gb2SVkbn1VFFFD4QPNjEWK3boiPM9T",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/8.222.140.235/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm38aXwHiKzxzf4p54bjxeVZ7EoRsXVCGYPWkYrfBWopxZ",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/18.235.42.46/tcp/55607",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkwQQyw7ejxxDCX4VPQ6vgNW5G4FRrUQ5q8Sf63DVQvLku",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/47.236.186.92/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmT3KXwAzAfKDTpiku1kRBsSfLgUXC7M8HihTDV6y9F51t",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/18.166.48.138/udp/57641/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm3FReM95enq5xrdUGhcHxZAQgMP1GwqrjCEGkndynpdjC",
+      "enr": "enr:-PG4QDkVK-uvYxRKkXXQwQfB_riijIqpKeh_wJRfMWZTtCQTBbLR-LuIVn1ifsp82tSncqxHz_7Y6KrXKZ-LaB8suRUjh2F0dG5ldHOIAAAAAMAAAACDY2djgYCGY2xpZW501opMaWdodGhvdXNlijguMy4wLXJjLjCEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhII9VPyDbmZkhAAAAACEcXVpY4IjKYlzZWNwMjU2azGhAnQ9endC-Fb3Xj349QUb03_A8VdA8Xs7QEn1Zm-mQ81HiHN5bmNuZXRzAIN0Y3CCIyiDdWRwgiMo",
+      "last_seen_p2p_address": "/ip4/130.61.84.252/tcp/9000/p2p/16Uiu2HAm3FReM95enq5xrdUGhcHxZAQgMP1GwqrjCEGkndynpdjC",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmGzBhCb9D1n4JLsWuND8uqzC6chJuroiN6Tsd9obzvBfn",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/136.119.15.35/udp/1536/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmBKcb8WypXkUwd9TgRXU8Hc4RjzsbDSDCoiJpQLgGr1PB",
+      "enr": "enr:-Ni4QFAA17n5iJuKccS-eyKCErTMaQYWcAhgQvYnDyB24hFlDPQbJpUkJOnpvE0F_OaXdMI0blxqDfQ7xNLBScn22NCGAZmesaIzh2F0dG5ldHOIAAAAAABgAACDY2djBIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCEBQmYLINuZmSEAAAAAIRxdWljgjLIiXNlY3AyNTZrMaEC7C2sCu20DKJNJp9ii7hbiTCA6mVDhMDd-2Z_05sQ6z6Ic3luY25ldHMAg3RjcIJ1s4N1ZHCCdak",
+      "last_seen_p2p_address": "/ip4/5.9.152.44/udp/13000/quic-v1/p2p/16Uiu2HAmBKcb8WypXkUwd9TgRXU8Hc4RjzsbDSDCoiJpQLgGr1PB",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmH3zZbjKxKYz3yGTGc5E3iAPKcCrEF1JE266baNjNTMWj",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/157.180.15.181/udp/41003/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmJAojXQWZjdnJyEQVx4q84vvMyzrypcYvd4JfJL797gaJ",
+      "enr": "enr:-PG4QOYWTIQD2_-U3-g007RI4ff_6BrY6hTyGR5TV64HcoV-K7GSUWHxsf_dLL1veovUqmw80BisQWTJiHT3gvLW-C8Ih2F0dG5ldHOIAAAAAABgAACDY2djgYCGY2xpZW501opMaWdodGhvdXNlijguMy4wLXJjLjCEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhEBuaXCDbmZkhAAAAACEcXVpY4IjKYlzZWNwMjU2azGhA1Ht2sl2F4sJK7UPWwqXEaCa6m2svNXvdS_efpI55DR3iHN5bmNuZXRzAIN0Y3CCIyiDdWRwgiMo",
+      "last_seen_p2p_address": "/ip4/64.110.105.112/tcp/9000/p2p/16Uiu2HAmJAojXQWZjdnJyEQVx4q84vvMyzrypcYvd4JfJL797gaJ",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmHWdKg88v1dtEibzM2RLJQY7f3172w7vbcbp1Tykmbw1U",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.140.77.125/udp/2560/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm3UzUn9mdkg1ieCs4c3Z8Rftp41JAbeU5UYWLhqQxzCCb",
+      "enr": "enr:-Ni4QOssNS7Ey1Q81udUT-c3EA2E7wmYJQlgzWB57P-XW0yOLnApJPpmcwEEz4EjqKKGGUbeCtTSHkEFKHl5-Ox9odSGAaE7DBggh2F0dG5ldHOIAAAAAAAABgCDY2djBIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCEVXa1d4NuZmSEAAAAAIRxdWljgjLIiXNlY3AyNTZrMaECd7cn0-m_EmPg-NfgfDqDuGXdyrwNXrnX_Fl4SI8UTuSIc3luY25ldHMAg3RjcIJ2Y4N1ZHCCdmM",
+      "last_seen_p2p_address": "/ip4/85.118.181.119/tcp/30307/p2p/16Uiu2HAm3UzUn9mdkg1ieCs4c3Z8Rftp41JAbeU5UYWLhqQxzCCb",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm7TwYHJkmXPJ51BAfqYqzAWwB529z6BNKE4uKaP6ottQN",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/136.119.26.233/udp/1536/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmSh5A7La227b6M5QGuPutW7u4H1tnr516r5tmotf5Fu9f",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/169.155.168.124/tcp/21000",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm1PAwW3cLsLg8SZ89c8cupcqs8qNLtX7Fr28s2AuyDPzu",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/85.10.201.236/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmHSfsTjfp4j18VsaZcfUpg2nBwG79Td618x61PqkeMyAg",
+      "enr": "enr:-PC4QOm_H5seSrvQ0t8p2AowFUlWaHm-fTnZvrM33tnX43x7WYNUIoVGbaQuEktWWsA3nU012uFA_1rVoD3dvQs5dOkMh2F0dG5ldHOIAAAAAAAAABiDY2djBIZjbGllbnTWikxpZ2h0aG91c2WKOC4zLjAtcmMuMIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCEbV5gyYNuZmSEAAAAAIRxdWljgiMpiXNlY3AyNTZrMaEDRyKR20hnBoywjkU-czqXdVXswDidxcRGGWDS-BmqG2GIc3luY25ldHMAg3RjcIIjKIN1ZHCCIyg",
+      "last_seen_p2p_address": "/ip4/109.94.96.201/tcp/9000/p2p/16Uiu2HAmHSfsTjfp4j18VsaZcfUpg2nBwG79Td618x61PqkeMyAg",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm2FXJUMiRsdiLY3cMrLxFaduHyLTDkaZF9LSw7n3HeZCb",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/164.152.161.131/udp/26470/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmC39BmG87YtabixjTPB5Gepk1z9vJdCZ7uoSyw19fLa5w",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/84.32.64.150/udp/64451/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm5tfXwusd8RSxEPJBtby9y97Fb8uGboW5QmQswutM9w7d",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/13.228.121.224/udp/32418/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmTttBex5suwnKMc6LA3w1ykGv3gC1vbztmrMDJnqiv63a",
+      "enr": "enr:-PO4QPZko9vdo9PA5ujFi0Btqz0lrwinWoq6Wxsye-Jy9oGBfe2Dol3E7UWmfJAvjrYIjnxgTNXuMdiUsf0b_3G0ALWCEBSHYXR0bmV0c4j__________4NjZ2OBgIZjbGllbnTWikxpZ2h0aG91c2WKOC4zLjAtcmMuMIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCEREgXAYNuZmSEAAAAAIRxdWljgnXZiXNlY3AyNTZrMaED4m52knS5F8IcFxtpRN3hpBlmViG1-qwR_c8QjZxuBeGIc3luY25ldHMPg3RjcIJ12IN1ZHCCddg",
+      "last_seen_p2p_address": "/ip4/68.72.23.1/udp/30169/quic-v1/p2p/16Uiu2HAmTttBex5suwnKMc6LA3w1ykGv3gC1vbztmrMDJnqiv63a",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm2HeP3DM2MQcbZFz4mFm4bvMhzuo2TEay1pXUgN67Cq85",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.225.235.114/udp/34779/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmRpVB8hHREfWbCdvFQYawFf2fnByqdZwvC5S5boohdrtz",
+      "enr": "enr:-QEeuED2U92WJmoKe592UI60MvywEOAwNK3RhqHWGc2GeZXkxVrObVTGUAI_QsoSNi7Ca4_ZHqBKI6J6px0l24Ogy73kG4dhdHRuZXRziAAAAAAAMAAAg2NnYwSGY2xpZW501opMaWdodGhvdXNlijguMy4wLXJjLjCEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhJ20aUuDaXA2kCoBBPkwkCOlAAAAAAAAAAKDbmZkhAAAAACEcXVpY4IjKoVxdWljNoIjKolzZWNwMjU2azGhA8OWv-5evK2wnDYhiSXfwfQgrlCquN7BbfaomdyBvbULiHN5bmNuZXRzAIN0Y3CCIymEdGNwNoIjKYN1ZHCCIymEdWRwNoIjKQ",
+      "last_seen_p2p_address": "/ip4/157.180.105.75/udp/9002/quic-v1/p2p/16Uiu2HAmRpVB8hHREfWbCdvFQYawFf2fnByqdZwvC5S5boohdrtz",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkxzS38Dk3F3VxTVmUbrPdozMGYBPZWor2KM1DxNNSpnkQ",
+      "enr": "enr:-Nm4QOs5TevzrqVvf2CCv73WfEKeKU4g98LspugHczK4YiJfAENAjUMTHPsvAVM3AM63FPKToaDMaMXKDaBKtP8BdqmGAZmfOIqah2F0dG5ldHOIAAAAAAAAAAyDY2djgYCEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhFjGNH6DbmZkhAAAAACEcXVpY4IyyIlzZWNwMjU2azGhAjT3dmuwIBEzFGWSsYrrN8pBQZdbSlWzTumKLEDKrDPxiHN5bmNuZXRzAIN0Y3CCMsmDdWRwgjLJ",
+      "last_seen_p2p_address": "/ip4/88.198.52.126/udp/13000/quic-v1/p2p/16Uiu2HAkxzS38Dk3F3VxTVmUbrPdozMGYBPZWor2KM1DxNNSpnkQ",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm9FbxUKRvLLiTD2NKbFKr7EkV2cj46c4zMxnVkhpT98ji",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.81.106.12/udp/1024/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmNjmQLWwgPdLdGXbwwsMkNhQc76AAZYh6DYgnUrphwnM9",
+      "enr": "enr:-QEAuEAjmlq2eJQH6gqu3LtOkePKXheVOSOGxYl4NDfF3_tCpWCJcUZ-Xc9dmTV1QzXZTUYnlVaTeb2ecIECBCpA3NjvFodhdHRuZXRziAAAYAAAAAAAg2NnYwSEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhE-JY8aDaXA2kCABQdACUMYAAAAAAAAAAACDbmZkhAAAAACEcXVpY4IjKYVxdWljNoIjKYlzZWNwMjU2azGhA5XOIjG6jvKSKdPjGrB9Gv_uFetjl9KEyah0BkZEQPf0iHN5bmNuZXRzAIN0Y3CCIyiEdGNwNoIjKIN1ZHCCIyiEdWRwNoIjKA",
+      "last_seen_p2p_address": "/ip4/79.137.99.198/tcp/9000/p2p/16Uiu2HAmNjmQLWwgPdLdGXbwwsMkNhQc76AAZYh6DYgnUrphwnM9",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm3AWrTMqRKXC2QpC3d1UMEhtT1VAAZhKrKds96RKwFL5f",
+      "enr": "enr:-QEAuEBflXkpUBLJ8HYfv6uM6FDBIBtLk-Ha1VHjvFrP6krBwTrJb-rVkfzBozjqlXE1u-RdWav4Ej6qB5bHIkyNPMpqD4dhdHRuZXRziAAAYAAAAAAAg2NnYwSEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhEEV63SDaXA2kCoBBPkAaiIjAAAAAAAAAAKDbmZkhAAAAACEcXVpY4IjKYVxdWljNoIjKYlzZWNwMjU2azGhAnL7dsEeGq4MBOgcrPAfYAR90BZ-cRkd22zqygiO-OYKiHN5bmNuZXRzAIN0Y3CCIyiEdGNwNoIjKIN1ZHCCIyiEdWRwNoIjKA",
+      "last_seen_p2p_address": "/ip4/65.21.235.116/tcp/9000/p2p/16Uiu2HAm3AWrTMqRKXC2QpC3d1UMEhtT1VAAZhKrKds96RKwFL5f",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmHooqPbj8MaPMSHY181q8RekNpBBWvxkGZUecm5rbmmbB",
+      "enr": "enr:-PG4QEmQgxh1WVFKlfem1A4XfQqRbrT-iKnoPJpNHPNAnlnpHOK1W7FGaRt9a7m2y4nXiw9tQQI9yuAslQbTvLVaQrwkh2F0dG5ldHOIAAAAAAAwAACDY2djgYCGY2xpZW501opMaWdodGhvdXNlijguMy4wLXJjLjCEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhJ5liv-DbmZkhAAAAACEcXVpY4IjKYlzZWNwMjU2azGhA0yMxaE59PmUAb5rsvbbaNP9x91C1T71c2ApvDFdCXCOiHN5bmNuZXRzAIN0Y3CCIyiDdWRwgiMo",
+      "last_seen_p2p_address": "/ip4/158.101.138.255/tcp/9000/p2p/16Uiu2HAmHooqPbj8MaPMSHY181q8RekNpBBWvxkGZUecm5rbmmbB",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm6ri73iN6TmqhdwMWyutjBQGTi87FHn5hmVA1ZhGryaQy",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/177.54.159.87/udp/49042/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm1852z4ihbA1S1FyJEoSvnReqNZNbfj4Q97969w6LNfNg",
+      "enr": "enr:-PC4QLyXFlj1EExuBly7IKcFfnifjFRujPaLF5sr_bhfMgwkIT0z2yyu9RpClkVm2faTx5gMW4eH7Au1-4Li8RbNEfgEh2F0dG5ldHOIAAAAAAAAAAyDY2djBIZjbGllbnTWikxpZ2h0aG91c2WKOC4zLjAtcmMuMIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCEEtDMloNuZmSEAAAAAIRxdWljgiMpiXNlY3AyNTZrMaECVKO8QnT-CNHQ-wGoBDJ7mFsPLL8Fx3jYxLRBEFSTpFmIc3luY25ldHMAg3RjcIIjKIN1ZHCCIyg",
+      "last_seen_p2p_address": "/ip4/18.208.204.150/udp/9001/quic-v1/p2p/16Uiu2HAm1852z4ihbA1S1FyJEoSvnReqNZNbfj4Q97969w6LNfNg",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkxC5ksGQWiJpgAhLyR3rV3tzhyAEhZg66DnHFwF5kRJCn",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/3.90.38.174/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm771ueSpQgXYP1uiWjdGwuZXHtmDNUTZgKHZhy58HYMW8",
+      "enr": "enr:-PC4QCWwKS8QLXHsPFR18R_12MgP8Kxcf9eey1metCRwh0onVpVfEGE8F86xZNBt4gkqP6MpeWKYWMKShZGVJHt_sdchh2F0dG5ldHOIAAAAAAAAAAyDY2djBIZjbGllbnTWikxpZ2h0aG91c2WKOC4zLjAtcmMuMIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCERKjQgoNuZmSEAAAAAIRxdWljgiMriXNlY3AyNTZrMaECrYS9sCCRnmtvtc9vAuyZkhm_45_I91p7oQHCHx4GbaGIc3luY25ldHMAg3RjcIIjKoN1ZHCCIyo",
+      "last_seen_p2p_address": "/ip4/68.168.208.130/udp/9003/quic-v1/p2p/16Uiu2HAm771ueSpQgXYP1uiWjdGwuZXHtmDNUTZgKHZhy58HYMW8",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmMac4apv8zH5beY61PEprnCne59JEGuP9Saq4EojPckVo",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/40.160.1.96/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmTsdQ23dA1uERBZBu2D2yZ1kxfcztmLtomnPQ2KEqTrRj",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/141.95.84.115/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmAS8sucg8PgvP6KnTaqPm2oErQCP3Y4RnXYYTG4Xo9yUB",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/173.0.155.25/udp/31821/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmT1Yxu4MKbuaMQmBcC6XQ7br7es3VYjwk5HXwcmZhjJ1S",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/62.238.96.89/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmDXKsGFgqee1rtpARTQhw3AMHMuSkDnM5m9KTpLommumG",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/46.166.171.203/udp/52858/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmHrqqAsBK2BAyvd6EZ9NPeLbJZu1aeY3jdcmWAkwYSTXv",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/57.129.83.225/udp/64636/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmR74oJYLFE5fbSp38mA3wmBo4MzTvQ7fbPxn7Shb86T3W",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/23.88.5.162/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkufs6tRE4JvW8PGW4HLWhd25xcnrvxh1YN46PAc9wGegi",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.153.17.175/udp/16384/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmJSck7NRgR2vqtj4yzRNpy7hJNKNnmmLA57SbamArsvds",
+      "enr": "enr:-PC4QBFlokExK5ZhjrTHPo8vvvIac8clLbuOVXfcAj1gzjvbFqXDxMbp4dGQLK79qhzd3FZCJm0MuOPH_lZdIbR45kcIh2F0dG5ldHOIAACAAQAAAACDY2djQIZjbGllbnTWikxpZ2h0aG91c2WKOC4zLjAtcmMuMIRldGgykGaebBGQAAB2__________-CaWSCdjSCaXCELTupmINuZmSEAAAAAIRxdWljgiOKiXNlY3AyNTZrMaEDVfq4pF5WYvpBJamncS_IJAt5aiTQmgMRQhgS_3qUYM6Ic3luY25ldHMAg3RjcIIjiYN1ZHCCI4k",
+      "last_seen_p2p_address": "/ip4/45.59.169.152/udp/9098/quic-v1/p2p/16Uiu2HAmJSck7NRgR2vqtj4yzRNpy7hJNKNnmmLA57SbamArsvds",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmPWR7CT3t4xBnZSSa7UvogoLV7UL5UKnevb7zMi3rZfQR",
+      "enr": "enr:-PG4QG--1O1f9QlGnFwLG4LwsiwZsaYtZex_M897MDDc5mi4A12Q5DonNEs0o3ALtfYSXu54-wW5KRSCsrJ17K9izI4nh2F0dG5ldHOIAAAAAABgAACDY2djgYCGY2xpZW501opMaWdodGhvdXNlijguMy4wLXJjLjCEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhI2To0KDbmZkhAAAAACEcXVpY4IjKYlzZWNwMjU2azGhA6E-UmBd-7OpSnRq2UnVx4uV7NLmyeYRLhmxSFaZanA2iHN5bmNuZXRzAIN0Y3CCIyiDdWRwgiMo",
+      "last_seen_p2p_address": "/ip4/141.147.163.66/tcp/9000/p2p/16Uiu2HAmPWR7CT3t4xBnZSSa7UvogoLV7UL5UKnevb7zMi3rZfQR",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm7MTKtoNqynb18WGM6t4SSR25ySMgSK2w3MpBufmw9NPi",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/3.36.253.86/udp/46703/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkwYyvDZBX7pU37dk5aK4KRnp4ocMfWrEb5hnsLVcmfr8h",
+      "enr": "enr:-QEfuECZTKTL4OWC1qEqGL60jDpE0TOemXex2y1pb3K1XsD_Ck8Px-sb9NA_SqgPebuBl1TM_ZiTjP7zhc08VX1QUogiQYdhdHRuZXRziAAAAAAAYAAAg2NnY4GAhmNsaWVudNaKTGlnaHRob3VzZYo4LjMuMC1yYy4whGV0aDKQZp5sEZAAAHb__________4JpZIJ2NIJpcITKCAs5g2lwNpAmB_3AAQEAEH7CVf_-ew3Yg25mZIQAAAAAhHF1aWOCIymFcXVpYzaCIymJc2VjcDI1NmsxoQIflrjzUbaD2M3iGLuSI4iT9k_vJxhDkkTYZA3e_hO1sohzeW5jbmV0cwCDdGNwgiMohHRjcDaCIyiDdWRwgiMohHVkcDaCIyg",
+      "last_seen_p2p_address": "/ip4/202.8.11.57/tcp/9000/p2p/16Uiu2HAkwYyvDZBX7pU37dk5aK4KRnp4ocMfWrEb5hnsLVcmfr8h",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmSjU3JZGx834qGtHYFyobrqkrsp7vagv3hDj7u6sUibzT",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/204.16.244.82/udp/13000/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm6T19fGC7PqasfQA5ViTuinQ6J5pfZYuryso446Lyunzm",
+      "enr": "enr:-NS4QO_ryxxgAsSGXfdwNRJQ_EO-Mya4dFSkdk481emixfiTNgwf1EMfeEvItHDAX87_RQx8cacKf-tMw6vTdLDvcDSBrodhdHRuZXRziAYAAAAAAAAAg2NnY4GAhGV0aDKQZp5sEZAAAHb__________4JpZIJ2NIJpcISR75WJg25mZIQAAAAAhHF1aWOCIymJc2VjcDI1NmsxoQKjx9AOof59USu-1qRqU0tFbzwLxwGqHoV5Ag8LhSmoqohzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA",
+      "last_seen_p2p_address": "/ip4/145.239.149.137/tcp/9000/p2p/16Uiu2HAm6T19fGC7PqasfQA5ViTuinQ6J5pfZYuryso446Lyunzm",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmSMG5Ny7cYJYyFXA4xJLeYyfttMxAxtpWmRYGmfhP8oWY",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/18.188.51.26/udp/4745/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAkzVBzthsJq5rWAYzxBDPX2HxRAwcm3AW2L6hwwpjC7dnx",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.171.132.174/udp/1536/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm7hLdscjZd99jQt5p1Qj1exDUV85bNzWehuL7SZsqQLKm",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/176.9.35.94/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmLLJ3W2AwiSrnuL36NqUdEtAgFtQTQ1QQqgrKamPEQXDW",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.62.154.126/udp/1024/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm6d4QQgx7gVrZ44f8WXxuvZpKjMoYgic2c2wVmk8s9ipu",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/34.170.112.95/udp/1024/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmLLNxgLQbCFHi8pJpTjR8hzwSh9wHa9uZrVVt3n4fBWJT",
+      "enr": "enr:-QEeuEDETfkLMEGjQdSli3pbflMrvxlRe5uFbHQb6NMfLnoYElb00EEhr4BwHx_xO5qVkPSYB4Snkql3_DzPbYfi6DrjFYdhdHRuZXRziAAAYAAAAAAAg2NnYwSGY2xpZW501opMaWdodGhvdXNlijguMy4wLXJjLjCEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhMo9yjuDaXA2kCoDQAAAWgvMpJal__5zSCaDbmZkhAAAAACEcXVpY4IzLYVxdWljNoIzLolzZWNwMjU2azGhA3IZBoI8hk1E_yxpc8iJP8kqX8EjQdMPWk9WlQyW_6kYiHN5bmNuZXRzAIN0Y3CCL0WEdGNwNoIzLYN1ZHCCL0WEdWRwNoIzLQ",
+      "last_seen_p2p_address": "/ip4/202.61.202.59/udp/13101/quic-v1/p2p/16Uiu2HAmLLNxgLQbCFHi8pJpTjR8hzwSh9wHa9uZrVVt3n4fBWJT",
+      "state": "connected",
+      "direction": "outbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmSpvX8dBgfsDUHhCXkjsWHeUY6m83qxNig7zk7fsaWHE3",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/47.129.225.42/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmFTVLnqoTkG87gZtLBdXj6jwjjsg8JNyMktXfNuXZsXxY",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/18.140.233.199/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmTfgrAJB64iMFtLcc67ruoiyHD7mVNyxawTDNbm1Pivuy",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/57.129.90.99/udp/9001/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmSRuC3x7iexGWKRuNJHNCEkW1gZn8KNh8woKgo7ayEEmx",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/107.6.94.211/udp/64451/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmSVjWstAEJioNpZ8zTnmgLnaAam3xUFUsKvBvE1HMq2k1",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/80.249.84.48/udp/13000/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAm2BxkuPKiSsYcucPW5rr46TApH7D2LoC5QapQ7vytKsxP",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/54.174.129.145/udp/26845/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmSrtNjzduMEZz7qdXu9pzsRC3Q1LrQZ931DuBo8c8rBP3",
+      "enr": null,
+      "last_seen_p2p_address": "/ip4/35.194.212.141/udp/1024/quic-v1",
+      "state": "connected",
+      "direction": "inbound"
+    },
+    {
+      "peer_id": "16Uiu2HAmKpegjd4LFcfnsRS9cE1EdS6vTCecSraxi3hC9iMCvsY1",
+      "enr": "enr:-Nm4QNr5WXHXYQfx0-h6pVL5Y-Hx5KwVG34UR3VpRXfPGvxkU45J4u1PbV4zkiVdI-p0V4cGZIDC-iAOIadowhkZViiGAZmbD-Xdh2F0dG5ldHOIAAwAAAAAAACDY2djgYCEZXRoMpBmnmwRkAAAdv__________gmlkgnY0gmlwhIZBwpCDbmZkhAAAAACEcXVpY4JhqYlzZWNwMjU2azGhA2p7YbBTwGHto9wsswK46CealJUz-me74aAc-EspyfHGiHN5bmNuZXRzAIN0Y3CCYaiDdWRwgmGo",
+      "last_seen_p2p_address": "/ip4/134.65.194.144/udp/25001/quic-v1/p2p/16Uiu2HAmKpegjd4LFcfnsRS9cE1EdS6vTCecSraxi3hC9iMCvsY1",
+      "state": "connected",
+      "direction": "outbound"
+    }
+  ],
+  "meta": {
+    "count": 77
+  }
+}

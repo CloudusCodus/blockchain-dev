@@ -1,0 +1,43 @@
+# Execution layer (geth)
+# collected 2026-10-27T06:47:06Z
+
+## Geth running
+
+$ docker ps --filter name=^geth$
+NAMES     IMAGE                         STATUS
+geth      ethereum/client-go:v1.17.10   Up 44 hours
+
+$ web3_clientVersion
+Geth/v1.17.10-stable-1df30b18/linux-amd64/go1.27.3
+
+## Geth synchronized
+
+$ eth_syncing  (false = synced)
+false
+
+## Current block number
+
+$ eth_blockNumber (own node vs. public reference https://ethereum-sepolia-rpc.publicnode.com)
+own node:  12003420
+reference: 12003420
+difference: 0 blocks
+
+$ latest block of own node
+number 0xb7285c hash 0xa373e4b867b58ab1e9bdb1cd5261d6d890de333e4ae2ad13a2bb738a9793295a timestamp 0x6ae048e4
+
+## Execution peers
+
+$ net_peerCount
+50
+
+## Inbound / outbound connectivity
+
+$ admin.peers grouped by direction (IPC)
+"{\"total\":50,\"inbound\":34,\"outbound\":16}"
+
+$ admin.nodeInfo (advertised enode with public IP and port)
+"enode://25868022db409a6de72aa942a8fc0f5f226ee7ce4495e11c421ea1f44aa7c4f277a5696a6192cde0c5f49779ee03e72bc208dcecd51ceee6a3c14ad470b1d633@138.201.155.69:30303"
+"{\"discovery\":30303,\"listener\":30303}"
+
+$ first 15 peers: client, remote address, inbound
+"reth/v2.7.0-3d592ec  34.21.115.254:36024  inbound=true\nreth/v2.8.0-pulse-5f37396  157.90.179.40:30313  inbound=false\nreth/v2.7.0-3d592ec  213.5.38.138:40118  inbound=true\nreth/v2.8.1-d763342  67.213.121.187:30306  inbound=false\nGeth/v1.17.8-stable  161.129.67.42:30308  inbound=false\nreth/v2.7.0-3d592ec  15.204.100.46:30303  inbound=false\nreth/v2.7.0-3d592ec  15.235.226.200:39368  inbound=true\nGeth/v1.17.9-stable-9dffe6e9  69.168.226.241:42370  inbound=true\nGeth/v1.17.8-stable-a5790770  138.3.254.66:30303  inbound=false\nGeth/v1.17.8-stable-a5790770  92.42.108.250:31010  inbound=false\nGeth/v1.17.8-stable-a5790770  202.8.11.57:30303  inbound=false\nGeth/v1.17.9-stable-9dffe6e9  103.232.248.31:30304  inbound=false\nreth/v2.7.0-3d592ec  213.58.230.246:57808  inbound=true\nreth/v2.7.0-3d592ec  64.130.52.86:58942  inbound=true\nreth/v2.7.0-3d592ec  57.129.84.7:49838  inbound=true"

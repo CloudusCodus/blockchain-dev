@@ -1,0 +1,919 @@
+[
+  {
+    "enode": "enode://8b4e37c76116a410184b7af470f058b7ff8d4bf66517410b96796d71b5230c95005f8b7cd43a97c97ab1c562e7ec8cd1af588f542febb0d449f2088aadc5638b@94.112.213.128:52918",
+    "id": "19015da9322e049e83a4cf214422eb6e1f2856a88dfcef7e838b4708446f5ca0",
+    "name": "reth/v0.8.2",
+    "caps": [
+      "eth/66",
+      "eth/67",
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "94.112.213.128:52918",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 71,
+        "earliestBlock": 12003335,
+        "latestBlock": 12003462,
+        "latestBlockHash": "0x1f01dc4bd25cf85ef697feb9652ce1a7c146e135f120314b284560cf3d5e2530"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  },
+  {
+    "enode": "enode://472f27658e5a3fcb2a2075c6b05184420743ec1b9fe10accfaa00e03b06294675d85e65477688b12e3922f0f13aa8f25d0d6b81761ebc9cf58c9d79f5af08649@43.128.242.249:45594",
+    "id": "19338405950999e5b5a21647030288d4cc08589c9bf9a83922ee265189743935",
+    "name": "Geth/pubnode/v1.17.7-stable-3d858f85/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "43.128.242.249:45594",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003459,
+        "latestBlockHash": "0x703f547ef6bc943060dce9b3cda885c575f146476e39b7ef6be0dfa0cdf4ad79"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://7573947ed61814d4e558a021fc4408364972a6f68382b7023da7731ad6954b828b3ca1672d00b6ceb399c0860c440b0327fc0273f3ecb8df17d8f87ad40c723e@34.172.203.37:1024",
+    "id": "1a09aad5af6163a92470efe6a88a250624ee69e8ee9f92caa54c85a6d947d82c",
+    "name": "Geth/v1.17.7-stable-3d858f85/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "34.172.203.37:1024",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003450,
+        "latestBlockHash": "0xf2b074ccc3109f90705ddd04809cd908930d13bb6877f0d7c21298c7a1e6c14c"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://607305d2c02ffa7eaccbdec3746a5fc835d0cc208baf1e3049258f8ee0c6133f0dfc5cb4249e33833cc1eac39b4a4a0a378fd9242b70539860c529fbe76e22eb@69.168.226.241:52366",
+    "id": "20dcb472bad7a14ddc67abe12f1b962c89ceac95baf6aadb75e41208faeb3c81",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-amd64/go1.27.3",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "69.168.226.241:52366",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003452,
+        "latestBlockHash": "0x45ae256856106e1eea73c7be883d8387344d9e87b019b377865ebbd111e0490f"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://48b3fe93a418c6d4028cc0c4bf7b8bd017e93cf7ff2260440d3b625a2a30819f1694c3037f5c6b7f46d0d3e9751d295662d755cdeb613521c2f997b5d562e24c@217.198.128.204:62390",
+    "id": "28d0b4a77c6e066f16328a889155bd195f07f391adafe9f6d852c40f80ce82fe",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-arm64/go1.27.3",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "217.198.128.204:62390",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003446,
+        "latestBlockHash": "0x7845b07ae8be1129fa9b25001f892d91cdd125455f6e6f7db67b3c7a951a6a63"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://5f9ae5ece5b0efe157a1ddecc62c266deaaaaaff724b9251078e07801d640ec90c70a6993f38acc642507d8bc08c32d17c6074d5a61cfb31c071c8db73413314@64.118.250.82:48632",
+    "id": "28d57747623ebb57485b3800021ff072475b149c6200f5eb8de38e8cf574217f",
+    "name": "Geth/v1.17.8-stable-a5790770/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "64.118.250.82:48632",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003433,
+        "latestBlockHash": "0xa677027ae031e84646721b94f5e234e8eff63ab4ef9b4a91584e94497cfc2cc5"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://6362db9bfec8b13a639e623e6acf2f0ad05e2b182f951459a3fd23797431c8a55479446c3a3df3b9f291167e27de1950d18a8f7bfc775bf8d33cf5942384f0a7@138.2.155.222:13707",
+    "id": "39afb5e4dd95f34104b63c01b1b00cffe95811159782682627690e640f626726",
+    "name": "Nethermind/v2.1.0+b3e7e84c-hp/linux-x64/dotnet10.0.12",
+    "caps": [
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "138.2.155.222:13707",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 1450409,
+        "latestBlock": 12003462,
+        "latestBlockHash": "0x1f01dc4bd25cf85ef697feb9652ce1a7c146e135f120314b284560cf3d5e2530"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  },
+  {
+    "enode": "enode://879b3c3c2bdb42c1b38b79e8cf8907c7c932de2b20110d329714911c3cc20f931c2a903cfd65846b6c239860de42900131f94fc80a30895613c0b7cabc28c3dd@8.5.2.30:55954",
+    "id": "3d4c71b2a7e98964c40b39b8d5bc038dc69e2cf4ef3b15a50b7104c14d28f3a8",
+    "name": "Nethermind/v2.2.2+be201120-f/linux-x64/dotnet10.0.14",
+    "caps": [
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "8.5.2.30:55954",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 1450409,
+        "latestBlock": 12003461,
+        "latestBlockHash": "0xc52f5535033252937a116af0f4713fb97fe5a21d9b41f985e9f064f2121ca6f2"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  },
+  {
+    "enode": "enode://cd90cb564ae41a62f5168a9d8979a5833dcc0a0a3fa87a41c184d396e142edbcd7bccba9a94df16d41ea7cc551400e63b5d943f5779d58fb61b8065ca395f8f3@4.208.104.137:31460",
+    "id": "3e0584570cf00d5e5a974e2f58b50560167af26e812f6b1d32822a6ba52cd399",
+    "name": "Nethermind/v2.1.0+b3e7e84c-f/linux-x64/dotnet10.0.12",
+    "caps": [
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "4.208.104.137:31460",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 1450409,
+        "latestBlock": 12003456,
+        "latestBlockHash": "0x24d8f0291c0de8d22b1f8f29b52932fcf899af061d7e8d8b93a9daf6ad5f0279"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  },
+  {
+    "enr": "enr:-KO4QAXMHZpo52M7H1E9hLyKGv-i_ZX79RJCpuB5GBuxFEk5chI_tnZLjebsNXAL2f62nsfe1zO4ZP1CpdYk-3QR04-GAZjRkAIsg2V0aMfGhGwdlCOAgmlkgnY0gmlwhKyhLgSJc2VjcDI1NmsxoQLo7bfzaeSeAdOOvmJD6BGIDVvCHOxBOybG14zHnTV3xIRzbmFwwIN0Y3CCdl-DdWRwgnZf",
+    "enode": "enode://e8edb7f369e49e01d38ebe6243e811880d5bc21cec413b26c6d78cc79d3577c46468c7df2b919ae9100636b2f8c3bf8c28bf59e3f81db3ab1e3e3fc3314439e4@172.161.46.4:30303",
+    "id": "438eeb2abfb45f506f6778366bf6e4b5fdef0f8c60dfd6471e4f735629644210",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-amd64/go1.27.2",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:60582",
+      "remoteAddress": "172.161.46.4:30303",
+      "inbound": false,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003453,
+        "latestBlockHash": "0x847ae325786e472a0c21910f4435577439f908b6e1a59d14733e89f5f6e4f640"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://b7679b6f40fe225d129ab6d9301249311a21ed71cb4cdf23eda08167a4acca10f069bb2b69607c92ef33e358659e882eaa86d088af89ca631e9ac95f0e031707@3.220.167.114:51054",
+    "id": "43f60296525e8cf4e509caabf94a626d5c50236e34b34bbc1f072a4c43afb755",
+    "name": "Geth/v1.17.8-unstable-b10c4ecc-20261008/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "3.220.167.114:51054",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003458,
+        "latestBlockHash": "0x6b3cce6f80471fa2e8bf355965acf1f5aabf6e597129d5db7bb00741a6709545"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://eaaa3728945a2bff9bab7deed7acbd1444a378f4b4cd8195a48e382570530b931972182b09d24d4d6b3b815be4b19d742fb7628eb2a0de9c8afb5ecfacae3e25@164.152.161.131:35432",
+    "id": "4e5d4933cee8f71b979dbb57562bd9ef612ee0a746b250da62f27ce889c5e5be",
+    "name": "Nethermind/v2.2.2+be201120-h/linux-x64/dotnet10.0.14",
+    "caps": [
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "164.152.161.131:35432",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 1,
+        "latestBlock": 12003459,
+        "latestBlockHash": "0x703f547ef6bc943060dce9b3cda885c575f146476e39b7ef6be0dfa0cdf4ad79"
+      }
+    }
+  },
+  {
+    "enode": "enode://84ab00d53b3de3b342d5a5763a305f09c7a2fe168c1e5cce3ed9782af59279cc37c7144bbf2532977ac4719f86669a5816bf7d36f921440c2ae1822312fd3712@134.65.194.144:42596",
+    "id": "4f51d9e25b45e781d3342cfed7e2b45034529345f3aa292a84e138cd4c0a2da8",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-amd64/go1.25.14",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "134.65.194.144:42596",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003462,
+        "latestBlockHash": "0x1f01dc4bd25cf85ef697feb9652ce1a7c146e135f120314b284560cf3d5e2530"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://2b30cf116d315388ef9358c5faf427ba52440434ef18cac308ff12a87606683a9a587d3a06e4391d72e220904854c192ca3f5f593ec19e91fe284e5eaae18829@44.196.15.59:53051",
+    "id": "554848eb48b76b0d26e8c66817f87356afb84f58a559302fe31d8cc889454f19",
+    "name": "Geth/v1.17.8-stable-a5790770/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "44.196.15.59:53051",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003446,
+        "latestBlockHash": "0x7845b07ae8be1129fa9b25001f892d91cdd125455f6e6f7db67b3c7a951a6a63"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://b8e4bc7ce51de006ff4fd68f8f27e39b8cfbb5b39e851a58b8f849136e1be19da29a710613091b9bae84873cf5280b94213ecbb06f869039e18b2ec488c0e9dc@162.43.189.121:33274",
+    "id": "5957a2c94ce6e8cfd6e0665fb1820ca759d88b045c9c2da827dd518a4fa9ccd9",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "162.43.189.121:33274",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003456,
+        "latestBlockHash": "0x24d8f0291c0de8d22b1f8f29b52932fcf899af061d7e8d8b93a9daf6ad5f0279"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://4fde399faf7ca59a18d8980596d1c3bb1b590be0fa8ca1bac3706147809aff26d70ec9f5d1358ac81d249b234cd3d6dc9b882011e171dd8186c0433841c20b6a@152.70.41.67:24722",
+    "id": "6cbfe0b873be1522bbd927b451d1e11577d636f252144b748a724e6d002e494b",
+    "name": "Geth/v1.17.8-stable-a5790770/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "152.70.41.67:24722",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003440,
+        "latestBlockHash": "0x854715baa92af5a89f6ab0d265e9ecb927c57d2cc40c77e8f0bf5501fa72f85e"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://5969324efd5abb4fc4d24fc72a5d013da1c38d59cffdce8ad31025f0c91643a6dd35a026248b1769c50f46082a1e810e6758d987c1d16a6ece519faf6115923d@101.47.76.111:54198",
+    "id": "706533f2512b52ffed1c6d1a74b4052e916e4f184e3ddf76a472eeaa493bd08e",
+    "name": "Geth/v1.17.7-stable-3d858f85/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "101.47.76.111:54198",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003445,
+        "latestBlockHash": "0xb903da672f31f09b39561d98e23ca99761509cce542c2b224f6e6253bd557793"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://ab779c69decf74d08c20ca657ac9a7451e43db2a9cb421b128bf65e998c10ba433616459ab4e26b2978ab77bdd37ff07567487739cd6f3e83bd502107cd43f74@185.209.176.119:37596",
+    "id": "785766c18edea1678db9f05011e21855fe44fb1e9740fbd905124584d01c38e9",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-amd64/go1.27.3",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "185.209.176.119:37596",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003454,
+        "latestBlockHash": "0x488bba293cf985aac8fded242468896f937bc978d605c3573873363c77aaca0e"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://088aedf1611e108f7d8202b686f28dff11f7d01ea8fc7858865e7afc85244cf044b08e376ed8a02082774e612ee21fcbe62f8582b29529f6d42a7c04761c89dd@23.83.185.129:57226",
+    "id": "7a8788562d2ff76f35b11e1d869dfe73e2c575175c027da70131b0390564c991",
+    "name": "Nethermind/v2.1.0+b3e7e84c-hp/linux-x64/dotnet10.0.12",
+    "caps": [
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "23.83.185.129:57226",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 4367322,
+        "latestBlock": 12003456,
+        "latestBlockHash": "0x24d8f0291c0de8d22b1f8f29b52932fcf899af061d7e8d8b93a9daf6ad5f0279"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  },
+  {
+    "enode": "enode://5461cb8029927c46e1a22984ab407156627774368d8e94028641d1277d62f5f4cfda6fbcc5f3859d7241f08d476855ab9e832653ef8b0388bd39dd7bcbf6b115@37.27.68.81:41770",
+    "id": "8182107f2a1c9d8ad91ebe0e132578ebdb18e23846ddc421fe73826d60ca4451",
+    "name": "Geth/v1.17.8-stable-a5790770/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "37.27.68.81:41770",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003456,
+        "latestBlockHash": "0x24d8f0291c0de8d22b1f8f29b52932fcf899af061d7e8d8b93a9daf6ad5f0279"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://dd57b2a91137368c7cdfbb85c8dd9bfb1a6520d5271976936a795f98f6aa54c39854eb06aab87aab95f23c8395028ab1a7eee57493fed9c9630aef6fbe0cd8d9@23.111.181.158:35200",
+    "id": "92905b37a1c2d43f0bff3cadb8c640aade113f247c53c62896a5972163b39063",
+    "name": "Geth/v1.17.8-stable-a5790770/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "23.111.181.158:35200",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003439,
+        "latestBlockHash": "0xb0139589ee15c59391735e121528af20454347be59c45ddd3d3141fa830f0506"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://876d05c57e7743e9dbf25d168d3c65b76006ad7784fdc167199b204a83952ed7c645e7453f65019e957742e7933520e4c363c22afe743e87ee6c1546561d0665@13.250.214.103:53532",
+    "id": "9f5d9e6015c8094b6e32795761d490c7034a7ce0f2184155cb4df2549f4190c0",
+    "name": "Geth/v1.17.6-stable-3d84c6b2/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "13.250.214.103:53532",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 1450409,
+        "latestBlock": 12003453,
+        "latestBlockHash": "0x847ae325786e472a0c21910f4435577439f908b6e1a59d14733e89f5f6e4f640"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://213fcb65c6c136b9101adb579a0a6be9e4ddd127971faac774cd7e9f3f2488eb85196793ccd5747833c340c43bb5cc64742be6b1890827d24286abf32b7b194f@18.235.42.46:33346",
+    "id": "a385875f684bf4c713bc74d48a5bb781610b0d41536590b8c9a56533caa94732",
+    "name": "Geth/v1.17.8-stable-a5790770/linux-amd64/go1.26.4",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "18.235.42.46:33346",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003454,
+        "latestBlockHash": "0x488bba293cf985aac8fded242468896f937bc978d605c3573873363c77aaca0e"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://7dd7880e6c321cbe5c0bfdbdd3121ab7057ab27da73ca42c00a07d54aab7a7692e094648ed1d60e0f715a33d5357153a54a3783e441635b1f2874140af24ad4c@167.86.94.248:55162",
+    "id": "ee2da1ccb5ffb4c8e7aa3fbd8e9753ee0c32c4c29533c44b51e4d12de61e927c",
+    "name": "Nethermind/v2.2.2+be201120-hp/linux-x64/dotnet10.0.14",
+    "caps": [
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "167.86.94.248:55162",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 9700000,
+        "latestBlock": 12003456,
+        "latestBlockHash": "0x24d8f0291c0de8d22b1f8f29b52932fcf899af061d7e8d8b93a9daf6ad5f0279"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  },
+  {
+    "enr": "enr:-Ku4QEc_xUUjc6_IU82VZYaZsbuPqN_rYeSWiXis59yhotHnKsoPcAxbx6gBHWn_OU5AEW5I2gQP6kNP2JBEJUrVfq-GAZky207ig2V0aMfGhGwdlCOAgmlkgnY0gmlwhMPJPfmJc2VjcDI1NmsxoQNRBUfVn_p0nDXD_AodKJbg7_ryNsLOhClgwvQF7OwCuoRzbmFwwIN0Y3CCdl-DdWRwgsCuhHVkcDaCdl8",
+    "enode": "enode://510547d59ffa749c35c3fc0a1d2896e0effaf236c2ce842960c2f405ecec02ba7332882f98e39184134fc3f099cfb460eeaa9ea489c102991ab70c66040b6705@195.201.61.249:30303?discport=49326",
+    "id": "eff7e3044b2b8909ef4c4bd96578ad4b7ca22802c43d836af7d3b57423c2615b",
+    "name": "Geth/v1.17.9-stable-9dffe6e9/linux-amd64/go1.27.3",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:38888",
+      "remoteAddress": "195.201.61.249:30303",
+      "inbound": false,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003459,
+        "latestBlockHash": "0x703f547ef6bc943060dce9b3cda885c575f146476e39b7ef6be0dfa0cdf4ad79"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://8862b728fb2b8c18a0c82b7dc9258a1b24f1782e10e62a71b0cb34e2e1778142d3a93ad3212108ae7382f4ad543869ffbebd1b62ae375ef408a280510d69a43b@149.50.106.8:48620",
+    "id": "f07e903292471c18326240f3c120e4a8381645dbca26cb62afdf08f0f3a02895",
+    "name": "Geth/v1.17.6-stable-3d84c6b2/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "149.50.106.8:48620",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003461,
+        "latestBlockHash": "0xc52f5535033252937a116af0f4713fb97fe5a21d9b41f985e9f064f2121ca6f2"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://f0bbbbb50e883bcd5c91f4ef06a71c9d944e4c07791bbf979cda7257b61980fc37e4c2e2b29b62a20d4b53ee528f3e9edad71bdfe1fe77bd2045d430a9cfa324@16.162.199.21:57097",
+    "id": "f0de83a2a517ec90c90d599f68e04b7b77a79b0db8c218ec5b7fa45394e4d325",
+    "name": "Geth/v1.17.8-stable-a5790770/linux-amd64/go1.27.1",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "16.162.199.21:57097",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003445,
+        "latestBlockHash": "0xb903da672f31f09b39561d98e23ca99761509cce542c2b224f6e6253bd557793"
+      },
+      "snap": {
+        "version": 1
+      }
+    }
+  },
+  {
+    "enode": "enode://6958dc966ed1acf780c57b35c99e2db044015706abb2fbe9e41a20bbf17867771371bfdd99296a47143a56ff378150662eb629ccefd48c25e2777c1ccfd1f8f4@146.19.127.135:7776",
+    "id": "f880cfe93ce1564deb991866ff9f2dfd70cbd0441696c4129756c77a9c87d79b",
+    "name": "Geth/v1.17.10-stable-1df30b18/linux-amd64/go1.27.3",
+    "caps": [
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "146.19.127.135:7776",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 0,
+        "latestBlock": 12003448,
+        "latestBlockHash": "0xfaba96b93ae07726a3ad0c8775a2582bce03a13b4d23ffee678d7bd7949cd520"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  },
+  {
+    "enode": "enode://933f06201c0ebeb3e3eb6de9b3218b75ca48fccb3d028c9f0a8d328c6d84cd17ed5c0280a51a32173c0f705f9c4850094cbdb6c96dd19d7325037113fd395658@176.9.99.244:47436",
+    "id": "fc1776bd68bc8daa5d1d80104929b019301bfcc8fba0745877c55331b7705613",
+    "name": "Nethermind/v2.1.0+b3e7e84c-hp/linux-x64/dotnet10.0.12",
+    "caps": [
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "176.9.99.244:47436",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 1450409,
+        "latestBlock": 12003456,
+        "latestBlockHash": "0x24d8f0291c0de8d22b1f8f29b52932fcf899af061d7e8d8b93a9daf6ad5f0279"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  },
+  {
+    "enode": "enode://04d34c8f54c58432a6b3daf266aca18b9156026f73b2ca5d1027f0166c5a0311d64b93a891734e85b529b01125fa98ce6067821d13cecfdda689d22ba90af71f@65.21.131.202:35802",
+    "id": "fc93d00a455655b16332ea046c5929bcc1d51a51f6a4ced65582698d6616c680",
+    "name": "Nethermind/v2.2.0+1d2aff00-f/linux-x64/dotnet10.0.13",
+    "caps": [
+      "eth/68",
+      "eth/69",
+      "eth/70",
+      "eth/71",
+      "eth/72",
+      "snap/1",
+      "snap/2"
+    ],
+    "network": {
+      "localAddress": "172.18.0.2:30303",
+      "remoteAddress": "65.21.131.202:35802",
+      "inbound": true,
+      "trusted": false,
+      "static": false
+    },
+    "protocols": {
+      "eth": {
+        "version": 72,
+        "earliestBlock": 1450409,
+        "latestBlock": 12003456,
+        "latestBlockHash": "0x24d8f0291c0de8d22b1f8f29b52932fcf899af061d7e8d8b93a9daf6ad5f0279"
+      },
+      "snap": {
+        "version": 2
+      }
+    }
+  }
+]
